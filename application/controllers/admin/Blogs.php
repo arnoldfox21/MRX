@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Blogs extends CI_Controller {
 	
-	// Main Page Blogs
+	
 	public function index() {
 
 		$site  = $this->mConfig->list_config();
@@ -16,17 +16,13 @@ class Blogs extends CI_Controller {
 		$this->load->view('admin/layout/wrapper',$data);
 	}
 
-/* 
-	Function Create
-*/
 
-	// Main Page Categories Blogs
 	public function categories() {
 		
 		$site		= $this->mConfig->list_config();
 		$categories	= $this->mCategories->listCategories();		
 		
-		// Validasi
+	
 		$valid = $this->form_validation;
 		$valid->set_rules('category_name','Category Name','required');
 		$valid->set_rules('order_category','Order Category','required');
@@ -54,7 +50,7 @@ class Blogs extends CI_Controller {
 	}
 		
 				
-	// Create Blog
+
 	public function create() {
 		
 		$site 	  = $this->mConfig->list_config();
@@ -111,7 +107,7 @@ class Blogs extends CI_Controller {
 				$this->session->set_flashdata('sukses','Success');
 				redirect(base_url('admin/blogs/'));
 		}}
-		// Default page
+		
 		$data = array(	'title'		=> 'Create Blogs - '.$site['nameweb'],
 						'site'		=> $site,
 						'categories'=> $categories,
@@ -119,18 +115,14 @@ class Blogs extends CI_Controller {
 		$this->load->view('admin/layout/wrapper',$data);
 	}	
 
-/* 
-	Function Edit 
-*/
 
-	// Edit Categories Blogs
 	public function edit_category($category_id) {
 		
 		$site 	  	 = $this->mConfig->list_config();
 		$category 	 = $this->mCategories->detailCategory($category_id);
 		$endCategory = $this->mCategories->endCategory();
 
-		// Validation
+		
 		$valid = $this->form_validation;
 		$valid->set_rules('category_name','Category Name','required');
 		$valid->set_rules('order_category','Order Category','required');
@@ -156,14 +148,14 @@ class Blogs extends CI_Controller {
 		}
 	}
 
-	// Edit Blogs
+
 	public function edit($blog_id) {
 
 		$blog		= $this->mBlogs->detailBlog($blog_id);
 		$endBlog	= $this->mBlogs->endBlog();		
 		$category	= $this->mCategories->listCategories();
 
-		// Validation
+	
 		$v = $this->form_validation;
 		$v->set_rules('category_id','Category Blog','required');
 		$v->set_rules('title','Title Blog','required');
@@ -242,11 +234,7 @@ class Blogs extends CI_Controller {
 		$this->load->view('admin/layout/wrapper', $data);
 	}			
 
-/* 
-	Function Delete
-*/
 
-	// Delete Blog
 	public function delete_blog($blog_id) {
 		$data = array('blog_id'	=> $blog_id);
 		$this->mBlogs->deleteBlog($data);		
@@ -254,7 +242,6 @@ class Blogs extends CI_Controller {
 		redirect(base_url('admin/blogs'));
 	}
 
-	// Delete Category Blog
 	public function delete_category($category_id) {
 		$data = array('category_id'	=> $category_id);
 		$this->mCategories->deleteCategory($data);		

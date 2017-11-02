@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Galleries extends CI_Controller {
 	
-	// Main Page Products
+	
 	public function index() {
 
 		$site      = $this->mConfig->list_config();
@@ -17,7 +17,7 @@ class Galleries extends CI_Controller {
 		$this->load->view('admin/layout/wrapper',$data);
 	}
 
-	// Create Gallery
+	
 	public function create() {
 		
 		$site = $this->mConfig->list_config();
@@ -66,20 +66,20 @@ class Galleries extends CI_Controller {
 				$this->session->set_flashdata('sukses','Success');
 				redirect(base_url('admin/galleries/'));
 		}}
-		// Default page
+	
 		$data = array(	'title'		=> 'Create Gallery - '.$site['nameweb'],
 						'site'		=> $site,
 						'isi'		=> 'admin/galleries/create');
 		$this->load->view('admin/layout/wrapper',$data);
 	}
 
-	// Edit Gallery
+
 	public function edit($gallery_id) {
 
 		$gallery	= $this->mGalleries->detailGallery($gallery_id);
 		$endGallery	= $this->mGalleries->endGallery();		
 
-		// Validation
+
 		$v = $this->form_validation;
 		$v->set_rules('gallery_name','Gallery Name','required');
 		
@@ -154,7 +154,7 @@ class Galleries extends CI_Controller {
 		$this->load->view('admin/layout/wrapper', $data);
 	}	
 
-	// Delete Gallery
+	
 	public function delete($gallery_id) {
 		$data = array('gallery_id'	=> $gallery_id);
 		$this->mGalleries->deleteGallery($data);		

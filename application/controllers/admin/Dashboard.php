@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Dashboard extends CI_Controller {
 	
-	// Main Page
+	
 	public function index() {
 		$site = $this->mConfig->list_config();
 		$data = array(	'title'		=> 'Dashboard - '.$site['nameweb'],
@@ -18,11 +18,11 @@ class Dashboard extends CI_Controller {
 		$this->load->view('admin/layout/wrapper',$data);
 	}
 		
-	// General Config
+	
 	public function config() {
 		$site = $this->mConfig->list_config();
 		
-		// Validasi 
+		
 		$this->form_validation->set_rules('nameweb','Nama website','required');
 		$this->form_validation->set_rules('email','Email','valid_email');
 		
@@ -49,7 +49,7 @@ class Dashboard extends CI_Controller {
 		}
 	}
 
-	// Config Social
+
 	public function social() {
 
 			$site = $this->mConfig->list_config();
@@ -79,7 +79,7 @@ class Dashboard extends CI_Controller {
 		}
 	}
 
-	// Config Locations
+	
 	public function locations() {
 
 			$site = $this->mConfig->list_config();
@@ -105,7 +105,7 @@ class Dashboard extends CI_Controller {
 		}
 	}		
 	
-	// Config Logo
+	
 	public function logo() {
 		$site = $this->mConfig->list_config();
 		
@@ -127,7 +127,7 @@ class Dashboard extends CI_Controller {
 		$this->load->view('admin/layout/wrapper',$data);
 		}else{
 				$upload_data				= array('uploads' =>$this->upload->data());
-				// Image Editor
+				
 				$config['image_library']	= 'gd2';
 				$config['source_image'] 	= './assets/upload/image/'.$upload_data['uploads']['file_name']; 
 				$config['new_image'] 		= './assets/upload/image/thumbs/';
@@ -138,11 +138,10 @@ class Dashboard extends CI_Controller {
 				$config['thumb_marker'] 	= '';
 				$this->load->library('image_lib', $config);
 				$this->image_lib->resize();
-				// Hapus gambar lama
+			
 				unlink('./assets/upload/image/'.$site['logo']);
 				unlink('./assets/upload/image/thumbs/'.$site['logo']);
-				// End hapus gambar lama
-				// Masuk ke database
+			
 				$i = $this->input;
 				$data = array(	'config_id'		=> $i->post('config_id'),
 								'logo'			=> $upload_data['uploads']['file_name']
@@ -151,14 +150,14 @@ class Dashboard extends CI_Controller {
 				$this->session->set_flashdata('sukses','Konfigurasi Telah Diupdate');
 				redirect(base_url('admin/dashboard/logo'));
 		}}
-		// Default page
+		
 		$data = array(	'title'	=> 'Config Logo',
 						'site'	=> $site,
 						'isi'	=> 'admin/dashboard/logo');
 		$this->load->view('admin/layout/wrapper',$data);
 	}
 	
-	// Config Icon
+	
 	public function icon() {
 		$site = $this->mConfig->list_config();
 		
@@ -180,7 +179,7 @@ class Dashboard extends CI_Controller {
 		$this->load->view('admin/layout/wrapper',$data);
 		}else{
 				$upload_data				= array('uploads' =>$this->upload->data());
-				// Image Editor
+			
 				$config['image_library']	= 'gd2';
 				$config['source_image'] 	= './assets/upload/image/'.$upload_data['uploads']['file_name']; 
 				$config['new_image'] 		= './assets/upload/image/thumbs/';
@@ -190,12 +189,12 @@ class Dashboard extends CI_Controller {
 				$config['height'] 			= 150; // Pixel
 				$config['thumb_marker'] 	= '';
 				$this->load->library('image_lib', $config);
-				// Hapus gambar lama
+				
 				unlink('./assets/upload/image/'.$site['icon']);
 				unlink('./assets/upload/image/thumbs/'.$site['icon']);
-				// End hapus gambar lama
+				
 				$this->image_lib->resize();
-				// Masuk ke database
+			
 				$i = $this->input;
 				$data = array(	'config_id'		=> $i->post('config_id'),
 								'icon'			=> $upload_data['uploads']['file_name']
@@ -204,7 +203,7 @@ class Dashboard extends CI_Controller {
 				$this->session->set_flashdata('sukses','Konfigurasi Telah Diupdate');
 				redirect(base_url('admin/dashboard/icon'));
 		}}
-		// Default page
+		
 		$data = array(	'title'	=> 'Config Icon',
 						'site'	=> $site,
 						'isi'	=> 'admin/dashboard/icon');

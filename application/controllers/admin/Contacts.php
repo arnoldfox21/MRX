@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Contacts extends CI_Controller {
 	
-	// Inbox Contacts
+
 	public function inbox() {
 
 		$site  = $this->mConfig->list_config();
@@ -16,7 +16,7 @@ class Contacts extends CI_Controller {
 		$this->load->view('admin/layout/wrapper',$data);
 	}
 
-	// Delete Message
+	
 	public function delete($message_id) {
 		$data = array('message_id'	=> $message_id);
 		$this->mContacts->deleteMessage($data);		

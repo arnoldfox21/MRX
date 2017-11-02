@@ -3,8 +3,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Clients extends CI_Controller {
-	
-	// Main Page Clients
+
 	public function index() {
 
 		$site  	  = $this->mConfig->list_config();
@@ -16,7 +15,7 @@ class Clients extends CI_Controller {
 		$this->load->view('admin/layout/wrapper',$data);
 	}
 
-	// Create Product
+
 	public function create() {
 		
 		$site = $this->mConfig->list_config();
@@ -65,20 +64,20 @@ class Clients extends CI_Controller {
 				$this->session->set_flashdata('sukses','Success');
 				redirect(base_url('admin/clients/'));
 		}}
-		// Default page
+		
 		$data = array(	'title'		=> 'Create Client - '.$site['nameweb'],
 						'site'		=> $site,
 						'isi'		=> 'admin/clients/create');
 		$this->load->view('admin/layout/wrapper',$data);
 	}
 
-	// Edit Client
+	
 	public function edit($client_id) {
 
 		$client	= $this->mClients->detailClient($client_id);
 		$endClient	= $this->mClients->endClient();		
 
-		// Validation
+		
 		$v = $this->form_validation;
 		$v->set_rules('client_name','Client Name','required');
 		
@@ -151,7 +150,7 @@ class Clients extends CI_Controller {
 		$this->load->view('admin/layout/wrapper', $data);
 	}	
 
-	// Delete Client
+	
 	public function delete($client_id) {
 		$data = array('client_id' => $client_id);
 		$this->mClients->deleteClient($data);		

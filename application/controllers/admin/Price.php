@@ -3,13 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Price extends CI_Controller {
 
-	// Index page 
+
 	public function index() {
 		
 		$price	= $this->mPrice->listPrice();
 		$site	= $this->mConfig->list_config();
-		
-		// Validasi
+	
 		$valid = $this->form_validation;
 		$valid->set_rules('price_name','Price Name','required');
 		$valid->set_rules('price','Price','required');
@@ -38,13 +37,13 @@ class Price extends CI_Controller {
 		}
 	}
 
-	// Headline 
+
 	public function headline() {
 		
 		$price	= $this->mPrice->listPrice();
 		$site	= $this->mConfig->list_config();
 		
-		// Validasi
+		
 		$valid = $this->form_validation;
 		$valid->set_rules('headline','Headline','required');
 		
@@ -65,13 +64,13 @@ class Price extends CI_Controller {
 		}
 	}
 
-	// Edit Price
+
 	public function edit($price_id) {
 		
 		$price	= $this->mPrice->detailPrice($price_id);
 		$site	= $this->mConfig->list_config();
 		
-		// Validasi
+	
 		$valid = $this->form_validation;
 		$valid->set_rules('price_name','Price Name','required');
 		$valid->set_rules('price','Price','required');
@@ -100,7 +99,7 @@ class Price extends CI_Controller {
 		}
 	}	
 
-	// Delete Price
+	
 	public function delete($price_id) {
 		$data = array('price_id' => $price_id);
 		$this->mPrice->deletePrice($data);		

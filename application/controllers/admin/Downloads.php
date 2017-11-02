@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Downloads extends CI_Controller {
 	
-	// Main Page Downloads
+	
 	public function index() {
 
 		$site  	   = $this->mConfig->list_config();
@@ -16,7 +16,6 @@ class Downloads extends CI_Controller {
 		$this->load->view('admin/layout/wrapper',$data);
 	}
 
-	// Upload File
 	public function upload() {
 		
 		$site = $this->mConfig->list_config();
@@ -56,21 +55,21 @@ class Downloads extends CI_Controller {
 				$this->session->set_flashdata('sukses','Success');
 				redirect(base_url('admin/downloads/'));
 		}}
-		// Default page
+		
 		$data = array(	'title'		=> 'Upload - '.$site['nameweb'],
 						'site'		=> $site,
 						'isi'		=> 'admin/downloads/upload');
 		$this->load->view('admin/layout/wrapper',$data);
 	}
 
-	// Edit File
+	
 	public function edit($download_id) {
 
 		$download	 = $this->mDownloads->detailDownload($download_id);
 		$endDownload = $this->mDownloads->endDownload();			
 		$site		 = $this->mConfig->list_config();			
 
-		// Validation
+		
 		$v = $this->form_validation;
 		$v->set_rules('file_name','File Name','required');
 		
@@ -132,7 +131,6 @@ class Downloads extends CI_Controller {
 		$this->load->view('admin/layout/wrapper', $data);
 	}
 
-	// Delete Download
 	public function delete($download_id) {
 		$data = array('download_id'	=> $download_id);
 		$this->mDownloads->deleteDownload($data);		

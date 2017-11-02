@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Products extends CI_Controller {
 	
-	// Main Page Products
+	
 	public function index() {
 
 		$site  	  = $this->mConfig->list_config();
@@ -16,7 +16,6 @@ class Products extends CI_Controller {
 		$this->load->view('admin/layout/wrapper',$data);
 	}
 
-	// Create Product
 	public function create() {
 		
 		$site = $this->mConfig->list_config();
@@ -65,20 +64,20 @@ class Products extends CI_Controller {
 				$this->session->set_flashdata('sukses','Success');
 				redirect(base_url('admin/products/'));
 		}}
-		// Default page
+		
 		$data = array(	'title'		=> 'Create Product - '.$site['nameweb'],
 						'site'		=> $site,
 						'isi'		=> 'admin/products/create');
 		$this->load->view('admin/layout/wrapper',$data);
 	}
 
-	// Edit Product
+	
 	public function edit($product_id) {
 
 		$product	= $this->mProducts->detailProduct($product_id);
 		$endProduct	= $this->mProducts->endProduct();		
 
-		// Validation
+
 		$v = $this->form_validation;
 		$v->set_rules('product_name','Product Name','required');
 		
@@ -151,7 +150,7 @@ class Products extends CI_Controller {
 		$this->load->view('admin/layout/wrapper', $data);
 	}	
 
-	// Delete Product
+	
 	public function delete($product_id) {
 		$data = array('product_id'	=> $product_id);
 		$this->mProducts->deleteProduct($data);		
