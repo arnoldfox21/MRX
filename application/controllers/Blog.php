@@ -3,15 +3,14 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Blog extends CI_Controller {
-	
-	// Main Page Blogs
+
 	public function index() {
 
 		$site  		= $this->mConfig->list_config();
 		$categories = $this->mCategories->listCategories();
 		$lastBlogs 	= $this->mBlogs->listLastBlogsPub();
 
-		// Pagination
+		
 		$this->load->library('pagination');
 		$config['base_url'] 		= base_url().'blog/index/';
 		$config['total_rows'] 		= count($this->mBlogs->totalBlogs());
@@ -23,7 +22,7 @@ class Blog extends CI_Controller {
 		$this->pagination->initialize($config); 
 		$page 		= ($this->uri->segment(3)) ? ($this->uri->segment(3) - 1) * $config['per_page'] : 0;
 		$blogs 		= $this->mBlogs->perPageBlogs($config['per_page'], $page);
-		// End Pagination		
+			
 		
 		$data = array(	'title'		=> 'Blog - '.$site['nameweb'],
 						'site'		=> $site,
@@ -35,7 +34,7 @@ class Blog extends CI_Controller {
 		$this->load->view('front/layout/wrapper',$data);
 	}
 
-	// Search Blog
+	
 	public function cari(){
 
 		$site 		= $this->mConfig->list_config();
@@ -54,7 +53,7 @@ class Blog extends CI_Controller {
 		$this->db->like('title', $data['ringkasan']);
         $this->db->from('blogs');
 
-		// pagination limit
+		
 		$pagination['base_url'] = base_url().'blog/cari/index/';
 		$pagination['total_rows'] = $this->db->count_all_results();
 		$pagination['per_page'] = "10";
@@ -77,7 +76,7 @@ class Blog extends CI_Controller {
 		$this->load->view('front/layout/wrapper');
 	}	
 
-	// Read Blog
+	
 	public function detil($slugBlog) {
 
 		$site  		= $this->mConfig->list_config();
@@ -97,7 +96,7 @@ class Blog extends CI_Controller {
 		$this->load->view('front/layout/wrapper',$data);
 	}
 
-  	// Reply Blog
+  	
 	public function replyBlog(){
 
 		if ($this->input->post('message')){
@@ -108,7 +107,7 @@ class Blog extends CI_Controller {
 		header('Location: ' . $_SERVER['HTTP_REFERER']);
   	}	
 
-	// Blog By Category
+	
 	public function kategori($slugBlog) {
 
 		$site  		= $this->mConfig->list_config();
@@ -117,7 +116,7 @@ class Blog extends CI_Controller {
 		$detailCategory = $this->mCategories->detailCategorySlug($slugBlog);
 		$blogs 		= $this->mBlogs->getAllBlogsByCategory($slugBlog);
 
-		// Pagination
+		
 		$this->load->library('pagination');
 		$config['base_url'] 		= base_url().'blog/kategori/index/';
 		$config['total_rows'] 		= $this->mBlogs->totalBlogsByCategory($slugBlog);
@@ -129,7 +128,7 @@ class Blog extends CI_Controller {
 		$this->pagination->initialize($config); 
 		$page 		= ($this->uri->segment(3)) ? ($this->uri->segment(3) - 1) * $config['per_page'] : 0;
 		$blogs 		= $this->mBlogs->getAllBlogsByCategory($slugBlog, $config['per_page'], $page);
-		// End Pagination			
+				
 		
 		$data = array(	'title'		=> $detailCategory['category_name'].' - '.$site['nameweb'],
 						'site'		=> $site,

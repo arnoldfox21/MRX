@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
 	
-	// Main Page Home
+	
 	public function index() {
 
 		$site  		= $this->mConfig->list_config();

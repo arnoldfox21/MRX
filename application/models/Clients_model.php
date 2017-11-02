@@ -8,7 +8,7 @@
             $this->load->database();
         }
 
-        // Listing Clients
+      
         public function listClients() {
             $this->db->select('*');
             $this->db->from('clients');
@@ -18,12 +18,12 @@
             return $query->result_array();
         }
 
-        // Create Client
+     
         public function createClient($data) {
             $this->db->insert('clients',$data);
         }
 
-        // Detail Client
+     
         public function detailClient($client_id) {
             $this->db->select('*');
             $this->db->from('clients');
@@ -33,19 +33,19 @@
             return $query->row_array();
         } 
 
-        // Edit Client
+ 
         public function editClient($data) {
             $this->db->where('client_id',$data['client_id']);
             $this->db->update('clients',$data);
         }           
 
-        // Delete Client
+   
         public function deleteClient($data) {
             $this->db->where('client_id',$data['client_id']);
             $this->db->delete('clients',$data);
         }
 
-        // End Client
+    
         public function endClient() {
             $this->db->select('*');
             $this->db->from('clients');

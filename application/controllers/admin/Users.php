@@ -3,13 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Users extends CI_Controller {
 
-	// Main Page Users
+
 	public function index() {
 		
 		$user	= $this->list_model->list_users();
 		$site	= $this->list_model->list_config();
 		
-		// Validasi
+		
 		$valid = $this->form_validation;
 		$valid->set_rules('username','Username','required');
 		$valid->set_rules('email','Email','required');
@@ -57,13 +57,13 @@ class Users extends CI_Controller {
 		}
 	}
 
-	// Is User Admins
+	
 	public function admin() {
 		
 		$admin	= $this->mAdmins->listAdmins();
 		$site	= $this->mConfig->list_config();
 		
-		// Validasi
+		
 		$valid = $this->form_validation;
 		$valid->set_rules('username','Username','required');
 		$valid->set_rules('email','Email','required');
@@ -91,13 +91,13 @@ class Users extends CI_Controller {
 		}
 	}	
 	
-	// Create User
+
 	public function create_user() {
 		
 		$user	= $this->list_model->list_users();
 		$site	= $this->list_model->list_config();
 		
-		// Validasi
+		
 		$valid = $this->form_validation;
 		$valid->set_rules('username','Username','required');
 		$valid->set_rules('email','Email','required');
@@ -131,13 +131,13 @@ class Users extends CI_Controller {
 		}
 	}
 
-	// Edit User
+	
 	public function edit_user($user_id) {
 		
 		$user	= $this->detail_model->detail_user($user_id);
 		$site	= $this->list_model->list_config();
 		
-		// Validasi
+		
 		$valid = $this->form_validation;
 		$valid->set_rules('username','Username','required');
 		$valid->set_rules('email','Email','required');
@@ -184,13 +184,13 @@ class Users extends CI_Controller {
 		}
 	}
 
-	// Edit User Admin
+	
 	public function edit_admin($admin_id) {
 		
 		$admin	= $this->mAdmins->detailAdmin($admin_id);
 		$site	= $this->mConfig->list_config();
 		
-		// Validasi
+	
 		$valid = $this->form_validation;
 		$valid->set_rules('email','Email','required');
 		
@@ -226,7 +226,7 @@ class Users extends CI_Controller {
 		}
 	}	
 	
-	// Delete User
+	
 	public function delete_user($user_id) {
 		$data = array('user_id'	=> $user_id);
 		$this->delete_model->delete_users($data);		
@@ -234,7 +234,7 @@ class Users extends CI_Controller {
 		redirect(base_url('admin/users'));
 	}
 
-	// Delete Admin
+	
 	public function delete_admin($admin_id) {
 		$data = array('admin_id' => $admin_id);
 		$this->mAdmins->deleteAdmin($data);		

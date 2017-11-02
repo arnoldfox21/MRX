@@ -8,7 +8,6 @@
             $this->load->database();
         }
 
-        // Listing Downloads
         public function listDownloads() {
             $this->db->select('*');
             $this->db->from('downloads');
@@ -18,7 +17,6 @@
             return $query->result_array();
         }
 
-        // Listing Downloads Publish
         public function listDownloadsPub() {
             $this->db->select('*');
             $this->db->from('downloads');
@@ -29,12 +27,12 @@
             return $query->result_array();
         }        
 
-        // Create Download
+  
         public function createDownload($data) {
             $this->db->insert('downloads',$data);
         }
 
-        // Detail Download
+ 
         public function detailDownload($download_id) {
             $this->db->select('*');
             $this->db->from('downloads');
@@ -44,19 +42,19 @@
             return $query->row_array();
         } 
 
-        // Edit Download
+        
         public function editDownload($data) {
             $this->db->where('download_id',$data['download_id']);
             $this->db->update('downloads',$data);
         }           
 
-        // Delete Download
+      
         public function deleteDownload($data) {
             $this->db->where('download_id',$data['download_id']);
             $this->db->delete('downloads',$data);
         } 
 
-        // End Download
+     
         public function endDownload() {
             $this->db->select('*');
             $this->db->from('downloads');

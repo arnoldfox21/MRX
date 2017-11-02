@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Download extends CI_Controller {
 	
-	// Main Page Downloads
+
 	public function index() {
 
 		$site  		= $this->mConfig->list_config();

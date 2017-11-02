@@ -8,7 +8,7 @@
             $this->load->database();
         }
 
-        // Listing Price
+      
         public function listPrice() {
             $this->db->select('*');
             $this->db->from('price');
@@ -18,12 +18,12 @@
             return $query->result_array();
         }
 
-        // Create Price
+       
         public function createPrice($data) {
             $this->db->insert('price',$data);
         }
 
-        // Detail Price
+       
         public function detailPrice($price_id) {
             $this->db->select('*');
             $this->db->from('price');
@@ -33,19 +33,19 @@
             return $query->row_array();
         } 
 
-        // Edit Price
+    
         public function editPrice($data) {
             $this->db->where('price_id',$data['price_id']);
             $this->db->update('price',$data);
         }           
 
-        // Delete Price
+       
         public function deletePrice($data) {
             $this->db->where('price_id',$data['price_id']);
             $this->db->delete('price',$data);
         }
 
-        // End Client
+   
         public function endPrice() {
             $this->db->select('*');
             $this->db->from('price');
@@ -54,7 +54,6 @@
             return $query->row_array();
         } 
 
-        // Per Page Price
         public function perPagePrice($limit,$start) {
             $this->db->select('*');
             $this->db->from('price');
@@ -65,7 +64,7 @@
             return $query->result_array();
         }
 
-        // Total Price
+      
         public function totalPrice() {
             $this->db->select('*');
             $this->db->from('price');

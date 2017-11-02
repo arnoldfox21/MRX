@@ -4,14 +4,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Kontak extends CI_Controller {		
 
-	// Main Page Kontak
+	
 	public function index() {
 		
 		$site  		= $this->mConfig->list_config();
 		$gallery    = $this->mGalleries->listGalleryPubProfile();
 		$blogs		= $this->mBlogs->listBlogsPub();
 		
-		// Validasi
 		$valid = $this->form_validation;
 		$valid->set_rules('name','Name','required');
 		$valid->set_rules('email','Email','required');

@@ -8,7 +8,7 @@
             $this->load->database();
         }
 
-        // Listing Contacts
+      
         public function listContacts() {
             $this->db->select('*');
             $this->db->from('contacts');
@@ -17,12 +17,12 @@
             return $query->result_array();
         }
 
-        // Send Message
+        
         public function sendMessage($data) {
             $this->db->insert('contacts',$data);
         }        
 
-        // Detail Message
+     
         public function detailMessage($message_id) {
             $this->db->select('*');
             $this->db->from('contacts');
@@ -32,7 +32,7 @@
             return $query->row_array();
         } 
 
-        // Delete Message
+      
         public function deleteMessage($data) {
             $this->db->where('message_id',$data['message_id']);
             $this->db->delete('contacts',$data);

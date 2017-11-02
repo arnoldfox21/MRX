@@ -8,7 +8,6 @@
             $this->load->database();
         }
 
-        // Listing Gallery
         public function listGalleries() {
             $this->db->select('*');
             $this->db->from('galleries');
@@ -18,7 +17,6 @@
             return $query->result_array();
         }
 
-        // Listing Galleries Publish
         public function listGalleriesPub() {
             $this->db->select('*');
             $this->db->from('galleries');
@@ -29,7 +27,6 @@
             return $query->result_array();
         } 
 
-        // Listing Galleries Slider 
         public function listGalleriesPubHome() {
             $this->db->select('*');
             $this->db->from('galleries');
@@ -40,7 +37,7 @@
             return $query->result_array();
         }
 
-        // Listing Galleriy Profile 
+        
         public function listGalleryPubProfile() {
             $this->db->select('*');
             $this->db->from('galleries');
@@ -51,7 +48,7 @@
             return $query->row_array();
         }
 
-        // Listing Galleriy Price 
+       
         public function listGalleryPubPrice() {
             $this->db->select('*');
             $this->db->from('galleries');
@@ -62,7 +59,7 @@
             return $query->row_array();
         }        
 
-        // Listing Galleriy Footer 
+  
         public function listGalleryPubFooter() {
             $this->db->select('*');
             $this->db->from('galleries');
@@ -73,12 +70,12 @@
             return $query->result_array();
         }                                
 
-        // Create Gallery
+
         public function createGallery($data) {
             $this->db->insert('galleries',$data);
         }
 
-        // Detail Gallery
+     
         public function detailGallery($gallery_id) {
             $this->db->select('*');
             $this->db->from('galleries');
@@ -88,19 +85,19 @@
             return $query->row_array();
         } 
 
-        // Edit Gallery
+   
         public function editGallery($data) {
             $this->db->where('gallery_id',$data['gallery_id']);
             $this->db->update('galleries',$data);
         }           
 
-        // Delete Gallery
+ 
         public function deleteGallery($data) {
             $this->db->where('gallery_id',$data['gallery_id']);
             $this->db->delete('galleries',$data);
         }        
 
-        // End Gallery
+
         public function endGallery() {
             $this->db->select('*');
             $this->db->from('galleries');

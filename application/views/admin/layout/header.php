@@ -19,7 +19,7 @@ date_default_timezone_set('Asia/Jakarta');
 $tgl_sekarang = date('F, d M Y');
 echo $tgl_sekarang;
 
-// Data user
+
 $admin_id		= $this->session->userdata('id');
 $name_session 	= $this->mAdmins->detailAdmin($admin_id);
 ?>

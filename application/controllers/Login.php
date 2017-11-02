@@ -8,7 +8,7 @@ class Login extends CI_Controller {
 //		$name = $this->session->userdata('name');
 //		if ($name == FALSE) {	
 
-		// Validasi
+		
 		$valid 		= $this->form_validation;
 		$username	= $this->input->post('username');
 		$password	= $this->input->post('password');

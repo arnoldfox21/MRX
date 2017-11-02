@@ -8,7 +8,7 @@
             $this->load->database();
         }
 
-        // Listing Admins
+     
         public function listAdmins() {
             $this->db->select('*');
             $this->db->from('admins');
@@ -17,12 +17,12 @@
             return $query->result_array();
         }
 
-        // Create Admin
+   
         public function createAdmin($data) {
             $this->db->insert('admins',$data);
         }
 
-        // Detail Admin
+
         public function detailAdmin($admin_id) {
             $this->db->select('*');
             $this->db->from('admins');
@@ -32,13 +32,12 @@
             return $query->row_array();
         } 
 
-        // Edit Admin
         public function editAdmin($data) {
             $this->db->where('admin_id',$data['admin_id']);
             $this->db->update('admins',$data);
         }           
 
-        // Delete Admin
+      
         public function deleteAdmin($data) {
             $this->db->where('admin_id',$data['admin_id']);
             $this->db->delete('admins',$data);

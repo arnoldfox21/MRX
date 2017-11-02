@@ -8,7 +8,6 @@
             $this->load->database();
         }
 
-        // Listing Categories
         public function listCategories() {
             $this->db->select('*');
             $this->db->from('categories');
@@ -18,12 +17,12 @@
             return $query->result_array();
         }
 
-        // Create Category
+     
         public function createCategory($data) {
             $this->db->insert('categories',$data);
         }
 
-        // Detail Category
+      
         public function detailCategory($category_id) {
             $this->db->select('*');
             $this->db->from('categories');
@@ -33,7 +32,7 @@
             return $query->row_array();
         }
 
-        // Detail Category By Slug
+    
         public function detailCategorySlug($slugCategory) {
             $this->db->select('*');
             $this->db->from('categories');
@@ -43,19 +42,19 @@
             return $query->row_array();
         }                  
 
-        // Edit Category
+        
         public function editCategory($data) {
             $this->db->where('category_id',$data['category_id']);
             $this->db->update('categories',$data);
         }           
 
-        // Delete Category
+     
         public function deleteCategory($data) {
             $this->db->where('category_id',$data['category_id']);
             $this->db->delete('categories',$data);
         } 
 
-        // End Category
+   
         public function endCategory() {
             $this->db->select('*');
             $this->db->from('categories');

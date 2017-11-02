@@ -8,7 +8,7 @@
             $this->load->database();
         }
 
-        // Listing Blogs
+        
         public function listBlogs() {
             $this->db->select('*');
             $this->db->from('blogs');
@@ -19,7 +19,7 @@
             return $query->result_array();
         }
 
-        // Listing Blogs Publish
+      
         public function listBlogsPub() {
             $this->db->select('*');
             $this->db->from('blogs');
@@ -31,7 +31,7 @@
             return $query->result_array();
         }
 
-        // Last Blogs Publish
+       
         public function listLastBlogsPub() {
             $this->db->select('*');
             $this->db->from('blogs');
@@ -43,12 +43,12 @@
             return $query->result_array();
         }                
 
-        // Create Blog
+  
         public function createBlog($data) {
             $this->db->insert('blogs',$data);
         }
 
-        // Detail Blog
+    
         public function detailBlog($blog_id) {
             $this->db->select('*');
             $this->db->from('blogs');
@@ -58,7 +58,7 @@
             return $query->row_array();
         }
 
-        // Read Blog
+ 
         public function readBlog($slugBlog) {
             $this->db->select('*');
             $this->db->from('blogs');
@@ -69,19 +69,18 @@
             return $query->row_array();
         }         
 
-        // Edit Blog
         public function editBlog($data) {
             $this->db->where('blog_id',$data['blog_id']);
             $this->db->update('blogs',$data);
         }           
 
-        // Delete Blog
+
         public function deleteBlog($data) {
             $this->db->where('blog_id',$data['blog_id']);
             $this->db->delete('blogs',$data);
         }
 
-        // End Blog
+     
         public function endBlog() {
             $this->db->select('*');
             $this->db->from('blogs');
@@ -90,7 +89,6 @@
             return $query->row_array();
         }
 
-        // Per Page Blogs
         public function perPageBlogs($limit,$start) {
             $this->db->select('*');
             $this->db->from('blogs');
@@ -102,7 +100,7 @@
             return $query->result_array();
         }
 
-        // Total Blogs
+    
         public function totalBlogs() {
             $this->db->select('*');
             $this->db->from('blogs');
@@ -114,7 +112,7 @@
         }
                       
 
-        // Reply Blog
+       
         public function replyBlog(){        
         $data = array( 
             'message'    => strip_tags(substr($this->input->post('message'),0,255)),
@@ -130,7 +128,7 @@
         
         }
 
-        // Comment by Blog
+    
         public function listCommentsByBlog($slugBlog){
             $this->db->select('*');
             $this->db->join('blogs','blogs.blog_id = comments.blog_id','LEFT');
@@ -147,7 +145,7 @@
             return $data;
         } 
 
-        // Count Comment By Blog
+   
         public function countCommentByBlog($blogId) {
             $this->db->select('*');
             $this->db->join('blogs','blogs.blog_id = comments.blog_id','LEFT');
@@ -155,7 +153,7 @@
             return $query->num_rows();  
         } 
 
-        // get Blogs by Category
+    
         public function getAllBlogsByCategory($slugBlog){
             $this->db->select(' blogs.blog_id,
                                 blogs.slug_blog,
@@ -191,7 +189,7 @@
             return $query->num_rows();
         } 
 
-        // Pencarian Blog
+    
         public function cariBlog($perPage, $uri, $ringkasan) {
             $this->db->select('*');
             $this->db->from('blogs');
@@ -208,7 +206,7 @@
                 return null;
         }
 
-        // Blog Terkait
+   
         public function blogTerkait($category_id){
             $this->db->select('*');
             $this->db->join('categories','categories.category_id = blogs.category_id','LEFT');

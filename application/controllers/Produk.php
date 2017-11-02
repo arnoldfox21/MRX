@@ -3,14 +3,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Produk extends CI_Controller {
-	
-	// Main Page Produk
+
 	public function index() {
 
 		$site  		= $this->mConfig->list_config();
 		$blogs 		= $this->mBlogs->listBlogsPub();
 
-		// Pagination
 		$this->load->library('pagination');
 		$config['base_url'] 		= base_url().'produk/index/';
 		$config['total_rows'] 		= count($this->mProducts->totalProducts());
@@ -22,7 +20,7 @@ class Produk extends CI_Controller {
 		$this->pagination->initialize($config); 
 		$page 		= ($this->uri->segment(3)) ? ($this->uri->segment(3) - 1) * $config['per_page'] : 0;
 		$products 	= $this->mProducts->perPageProducts($config['per_page'], $page);
-		// End Pagination			
+					
 		
 		$data = array(	'title'		=> 'Produk - '.$site['nameweb'],
 						'site'		=> $site,
@@ -33,7 +31,7 @@ class Produk extends CI_Controller {
 		$this->load->view('front/layout/wrapper',$data);
 	}
 
-	// Detil Produk
+	
 	public function detil($slugProduct) {
 
 		$site  		= $this->mConfig->list_config();
