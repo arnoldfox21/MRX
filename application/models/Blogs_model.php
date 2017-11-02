@@ -19,7 +19,19 @@
             return $query->result_array();
         }
 
-      
+       public function listBlogslimit($limit) {
+            $this->db->select('*');
+            $this->db->from('blogs');
+            $this->db->where(array('status' => 'publish'));
+            $this->db->join('admins','admins.admin_id = blogs.user_id','LEFT');            
+            $this->db->join('categories','categories.category_id = blogs.category_id','LEFT');
+            $this->db->order_by('blog_id','DESC');
+            $this->db->limit($limit);
+            $query = $this->db->get();
+            return $query->result_array();
+        }
+
+
         public function listBlogsPub() {
             $this->db->select('*');
             $this->db->from('blogs');

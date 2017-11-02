@@ -9,7 +9,7 @@ class Home extends CI_Controller {
 
 		$site  		= $this->mConfig->list_config();
 		$galleries  = $this->mGalleries->listGalleriesPubHome();
-		$blogs  	= $this->mBlogs->listBlogsPub();
+		$blogs  	= $this->mBlogs->listBlogslimit(4);
 		$products  	= $this->mProducts->listProductsPub();
 		$clients  	= $this->mClients->listClients();
 		

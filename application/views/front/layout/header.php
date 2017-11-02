@@ -1,10 +1,10 @@
   <body role="document">
   
-    <!-- device test, don't remove. javascript needed! -->
-    <span class="visible-xs"></span><span class="visible-sm"></span><span class="visible-md"></span><span class="visible-lg"></span>
-    <!-- device test end -->
     
-    <div id="k-head" class="container"><!-- container + head wrapper -->
+    <span class="visible-xs"></span><span class="visible-sm"></span><span class="visible-md"></span><span class="visible-lg"></span>
+   
+    
+    <div id="k-head" class="container">
     
         <div class="row"><!-- row -->
         

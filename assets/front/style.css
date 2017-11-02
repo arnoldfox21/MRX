@@ -194,13 +194,15 @@ span.alter-menu-icon { display: block; width: 24px; height: 24px; background: ur
 /* == END site body == */
 
 /* == site footer == */
-#k-footer { background: url(img/footer-bg.png) repeat left top scroll #FFF; border-top: 1px solid #EEE; padding: 40px 0; }
+#k-footer { background-color: #c317dc; color: #ffffff; border-top: 1px solid #EEE; padding: 40px 0; }
 /* == END site footer == */
 
 /* == site subfooter == */
-#k-subfooter { background-color: #f1f1f1; }
+#k-subfooter { background-color: #b819cf; }
 .copy-text { font-size: 11px; line-height: 16px; margin-bottom: 0; padding: 40px 0; text-transform: uppercase; }
 /* == END site subfooter == */
+
+.white-text { color: #ffffff }
 
 /* == BLOG == */
 .k-article-summary:not(:first-child) { margin-top: 60px; }
