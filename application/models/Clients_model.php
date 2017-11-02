@@ -1,8 +1,5 @@
 <?php
-	/*
-    @Copyright Indra Rukmana
-    @Class Name : Clients Model
-	*/
+	
     defined('BASEPATH') OR exit('No direct script access allowed');
 
     class Clients_model extends CI_Model {

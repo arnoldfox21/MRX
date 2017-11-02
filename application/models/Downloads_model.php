@@ -1,8 +1,5 @@
 <?php
-	/*
-    @Copyright Indra Rukmana
-    @Class Name : Downloads Model
-	*/
+	
     defined('BASEPATH') OR exit('No direct script access allowed');
 
     class Downloads_model extends CI_Model {

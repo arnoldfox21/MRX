@@ -1,8 +1,5 @@
 <?php
-	/*
-    @Copyright Indra Rukmana
-    @Class Name : Contacts
-	*/
+	
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Contacts extends CI_Controller {

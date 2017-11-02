@@ -1,8 +1,5 @@
 <?php
-	/*
-    @Copyright Indra Rukmana
-    @Class Name : Galleries
-	*/
+	
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Galleries extends CI_Controller {

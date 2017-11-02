@@ -1,8 +1,5 @@
 <?php
-	/*
-    @Copyright Indra Rukmana
-    @Class Name : Kontak(Front)
-	*/
+	
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Kontak extends CI_Controller {		

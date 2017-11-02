@@ -1,8 +1,5 @@
 <?php
-	/*
-    @Copyright Indra Rukmana
-    @Class Name : Admins Model
-	*/
+	
     defined('BASEPATH') OR exit('No direct script access allowed');
 
     class Admins_model extends CI_Model {

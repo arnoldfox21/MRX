@@ -1,8 +1,5 @@
 <?php
-	/*
-    @Copyright Indra Rukmana
-    @Class Name : Price Model
-	*/
+	
     defined('BASEPATH') OR exit('No direct script access allowed');
 
     class Price_model extends CI_Model {

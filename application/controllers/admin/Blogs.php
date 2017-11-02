@@ -1,8 +1,5 @@
 <?php
-	/*
-    @Copyright Indra Rukmana
-    @Class Name : Blogs
-	*/
+	
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Blogs extends CI_Controller {

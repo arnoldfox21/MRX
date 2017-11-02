@@ -1,8 +1,5 @@
 <?php
-	/*
-    @Copyright Indra Rukmana
-    @Class Name : Products
-	*/
+	
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Products extends CI_Controller {

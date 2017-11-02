@@ -1,8 +1,5 @@
 <?php
-	/*
-    @Copyright Indra Rukmana
-    @Class Name : Galeri(Front)
-	*/
+	
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Galeri extends CI_Controller {

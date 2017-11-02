@@ -1,8 +1,5 @@
 <?php
-	/*
-    @Copyright Indra Rukmana
-    @Class Name : Clients
-	*/
+	
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Clients extends CI_Controller {
