@@ -27,6 +27,15 @@
             return $query->result_array();
         } 
 
+        public function listGalleriesUser(){
+            $this->db->select('*');
+            $this->db->from('galleries');
+            $this->db->where(array('position' => 'footer'));
+            $this->db->order_by('gallery_id', 'DESC');
+            $query = $this->db->get();
+            return $query->result_array();
+        }
+
         public function listGalleriesPubHome() {
             $this->db->select('*');
             $this->db->from('galleries');

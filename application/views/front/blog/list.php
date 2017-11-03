@@ -88,7 +88,7 @@
                                 
                                 <form role="search" method="post" id="course-finder" action="<?php echo base_url('blog/cari');?>">
                                     <div class="input-group">
-                                        <input type="text" name="cari" placeholder="Ketika judul blog disini..." autocomplete="off" class="form-control" id="find-course" name="find-course" />
+                                        <input type="text" name="cari" placeholder="Ketik judul blog disini..." autocomplete="off" class="form-control" id="find-course" name="find-course" />
 
                                         <span class="input-group-btn"><button type="submit" name="q" class="btn btn-default">GO!</button></span>
                                     </div>

@@ -48,7 +48,7 @@
                                 </div>
                                 
                                 <div class="news-body">
-                                    <p><?php echo $blog['title'];?></p>                                    
+                                    <p><?php echo $blog['content'];?></p>                                    
                                 </div>                            
                             
                             </div>
@@ -127,7 +127,7 @@
                                                         
                                                         <div class="form-group col-lg-12">
                                                             <label for="url">Website</label>
-                                                            <input type="url" size="30" value="" name="website" id="url" class="form-control" required>
+                                                            <input type="url" size="30" value="" name="website" id="url" class="form-control">
                                                         </div>
                                                         
                                                     </div><!-- row end -->
@@ -137,7 +137,7 @@
                                                 <div class="col-lg-8 col-md-8 col-sm-12"><!-- textarea -->
                                                 
                                                     <div class="row"><!-- row -->
-                                                    
+                                                        
                                                         <div class="form-group clearfix col-lg-12">
                                                             <label for="comment">Comment</label>
                                                             <textarea aria-required="true" rows="8" cols="45" name="message" id="comment" class="form-control" required></textarea>
@@ -150,8 +150,11 @@
                                             </div><!-- row end -->
                                             
                                             <div class="row"><!-- row -->
-                                            
-                                                <div class="form-group clearfix col-lg-12 text-right remove-margin-bottom">
+                                                <div class="form-group clearfix col-lg-6 remove-margin-bottom">
+                                                    <div class="g-recaptcha" data-sitekey="6LfVlzQUAAAAAH2gVmIAiWdbEf0CzCNSGno-r6vn"></div>
+                                                    
+                                                </div>
+                                                <div class="form-group clearfix col-lg-6 text-right remove-margin-bottom">
                                                     <input type="submit" value="Post Comment" id="submit" name="submit" class="btn btn-default" /><!-- submit -->
                                                 </div>
                                                 
@@ -235,3 +238,4 @@
         </div><!-- container end -->
     
     </div><!-- content wrapper end -->    
+    <script src='https://www.google.com/recaptcha/api.js'></script>

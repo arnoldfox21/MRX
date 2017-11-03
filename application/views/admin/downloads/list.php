@@ -1,11 +1,11 @@
 <?php
-// Session 
+
 if($this->session->flashdata('sukses')) { 
 	echo '<div class="alert alert-success">';
 	echo $this->session->flashdata('sukses');
 	echo '</div>';
 } 
-// Error
+
 echo validation_errors('<div class="alert alert-success">','</div>'); 
 ?>
 

@@ -1,5 +1,5 @@
 <?php
-// Load konfigurasi
+
 $site = $this->mConfig->list_config();
 ?>
 <!DOCTYPE html>
@@ -38,13 +38,13 @@ $site = $this->mConfig->list_config();
 <div class="panel-body">
 
 <?php
-// Session 
+
 if($this->session->flashdata('sukses')) { 
     echo '<div class="alert alert-success">';
     echo $this->session->flashdata('sukses');
     echo '</div>';
 } 
-// Error
+
 echo validation_errors('<div class="alert alert-success">','</div>'); 
 ?>
 
@@ -73,8 +73,7 @@ echo validation_errors('<div class="alert alert-success">','</div>');
 </div>
 </div>
 </div>
-<!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
-<!-- JQUERY SCRIPTS -->
+
 <script src="<?php echo base_url() ?>assets/admin/assets/js/jquery-1.10.2.js"></script>
 <!-- BOOTSTRAP SCRIPTS -->
 <script src="<?php echo base_url() ?>assets/admin/assets/js/bootstrap.min.js"></script>

@@ -28,15 +28,7 @@
                                     <img src="<?php echo base_url('assets/upload/image/'.$gallery['image']);?>" alt="Featured image 1" class="img-responsive" />
                                 </figure>
                             	<h1 class="page-title">Daftar Harga</h1><!-- category title -->
-                            <br><b>Dicari Agen</b><br>
-Menjadi agen dan dapatkan keuntungan sbb :<br>
-1. Fee Setup Awal 60% untuk Agen<br>
-
-2. Fee Dengan Layanan 40% untuk Agen (pendapatan bulanan)<br>
-
-3. Fee Layanan Trainning 100% untuk Agen<br>
-
-4. Fee Layanan Maintenance 100% untuk Agen,<br> 
+                           
                             </div>
                         
                         </div><!-- row end -->
@@ -83,17 +75,7 @@ Menjadi agen dan dapatkan keuntungan sbb :<br>
                             </div>
                             
                         </div><!-- row end -->                 
-                    <b>Dengan Layanan</b> :<br>
-1. Bebas biaya permintaan penambahan fasilitas (bebas biaya request) .<br>
-2. Pengguna Menengah&Besar bebas dibuatkan software/hardware yang dibutuhkan.<br> 
-2. Bebas biaya remote<br>
-2. Bebas biaya perbaikan sistem informasi<br>
-3. Bebas biaya pengecekan/konsultasi kerusakan hardware/software<br>
-4. Bebas maintenan sistem secara online<br>
-
-untuk biaya yang katagori Call akan dilakukan penawaran perkasus kerja sama.
-
-khusus untuk software pulsa, penggunaannya akan dianggap mulai indutri kecil.
+                  
                     </div><!-- inner custom column end -->
                     
                 </div><!-- doc body wrapper end -->

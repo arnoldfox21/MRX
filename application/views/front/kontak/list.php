@@ -83,7 +83,9 @@
                                                 <label for="comments"><span class="required">*</span> Message</label>
                                                 <textarea aria-required="true" rows="5" cols="45" name="messages" id="comments" class="form-control requiredField mezage"></textarea>
                                             </div>
-                            
+                                            <div class="form-group clearfix pull-right col-lg-12">
+                                                <div class="g-recaptcha" data-sitekey="6LfVlzQUAAAAAH2gVmIAiWdbEf0CzCNSGno-r6vn"></div>
+                                            </div>
                                             <div class="form-group clearfix col-lg-12 text-right remove-margin-bottom">
                                                 <input type="hidden" name="submitted" id="submitted" value="true" />
                                                 <input type="submit" value="Kirim Pesan" id="submit" name="submit" class="btn btn-default" />
@@ -114,7 +116,7 @@
                                 <ul>
                                     <li><a href="<?php echo base_url('profil/harga');?>" title="menu item">Daftar Harga</a></li>
                                     <li><a href="<?php echo base_url('profil/klien');?>" title="menu item">Daftar Klien</a></li>
-                                    <li><a href="<?php echo base_url('kontak');?>" title="menu item">Kontak Kami</a></li>
+                                    <li><a href="<?php echo base_url('kontak');?>" title="menu item">Kontak</a></li>
                                 </ul>
                     
                             </li>
@@ -161,4 +163,4 @@
         </div><!-- container end -->
     
     </div><!-- content wrapper end -->
- 
+ <script src='https://www.google.com/recaptcha/api.js'></script>

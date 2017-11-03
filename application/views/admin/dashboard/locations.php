@@ -52,14 +52,13 @@ echo validation_errors('<div class="alert alert-success">','</div>');
 	
     <div class="col-md-6">
         <div class="form-group">
-        	<label>Paste Google Maps Frame Here</label>
+        	<label>Google Maps Frame</label>
             <textarea name="google_maps" placeholder="Google Maps Frame" class="form-control" value="about" id="about"><?php echo $site['google_maps']; ?></textarea>
         </div>
     </div>
     
     <div class="col-md-6" style="padding-bottom: 20px;">
-    	<label>Example:</label><br>
-        <img src="<?php echo base_url('assets/upload/image/frame_maps.png/') ?>" style="max-width:400px; height:auto;">
+    	
     </div>
     <div class="col-md-12">
         <iframe src="<?php echo $site['google_maps'];?>" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>

@@ -1,38 +1,10 @@
-/*
-Theme Name: Buntington
-Theme URI: https://wpshow.me/SCHOOL
-Author: Dameer DJ
-Author URI: http://themeforest.net/feeleep
-Description: HTML Education/School template based on Bootstrap v3.1
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-*/
 
-/* ----- Table Of Contents -----
-
-	0. Common styles
-	1. Navigation (Main & Functional)
-	2. Various page elements
-	3. Pages, Posts, Custom Posts & Widgets
-	4. Template plugins
-	5. Bootstrap custom stylings
-	6. Viewport stuff
-	7. Media Queries
-
--------------------------------- */
-
-/* ================================================== COMMON STYLES */
-
-/* == font and links == */
 body { font-family: 'Open Sans', 'Myriad Pro', 'Helvetica',  sans-serif; font-size: 16px; font-weight: 300; line-height: 26px; color: #777; }
 a { -webkit-transition: 0.2s ease-in-out all; -moz-transition: 0.2s ease-in-out all; -o-transition: 0.2s ease-in-out all; transition: 0.2s ease-in-out all; }
 a:link, a:visited { color: #8e00c9; text-decoration: none; }
 a:hover, a:focus { color: #8e00c9; outline: none; }
 a.moretag { font-size: 12px; text-transform: uppercase; }
-/* == END font and links == */
 
-/* == titles, titles custom == */
 h1, h2, h3, h4, h5, h6 { font-weight: 700; color: #636363; }
 h1, h2, h3 { margin: 40px 0 20px;}
 h4, h5, h6 { margin: 40px 0 10px;}
@@ -137,7 +109,7 @@ img.alignleft, img.aligncenter, img.alignright { margin-bottom: 5px; }
 /* main links */
 #drop-down-left > li { margin-left: 50px; }
 #drop-down-left > li:first-child { /*margin-left: 0;*/ }
-#drop-down-left a { font-size: 13px; font-weight: 700; padding: 20px 0 10px !important; text-transform: uppercase; border-left: none; border-right: none; border-top: 5px solid #EFEFEF; -webkit-transition: all .25s; -moz-transition: all .25s; transition: all .25s; }
+#drop-down-left a { font-size: 13px; font-weight: 700; padding: 20px 0 10px !important; text-transform: uppercase; border-left: none; border-right: none; border-top: 5px solid #b819cf; -webkit-transition: all .25s; -moz-transition: all .25s; transition: all .25s; }
 #drop-down-left .k-item-desc { font-size: 12px; font-weight: 300; color: #959595; text-transform: none; -moz-opacity: 0.7; -webkit-opacity: 0.7; opacity: 0.7; }
 #drop-down-left a:link, #drop-down-left a:visited { color: #363636; background-color: transparent; }
 /* drops */
@@ -383,8 +355,8 @@ li.comment #respond { margin-top: 30px; }
 .newsletter-form .btn-default { font-size: 14px; font-weight: 700; color: #FFF; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; border: none; padding: 9px 12px; }
 #course-finder .btn-default:before, 
 .newsletter-form .btn-default:before { content: ""; position: absolute; left: -4px; top: 50%; margin-top: -4px; width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; z-index: 999; }
-#course-finder .btn-default { background-color: #68b5e6; }
-#course-finder .btn-default:before { border-right: 5px solid #68b5e6; }
+#course-finder .btn-default { background-color: #8e00c9; }
+#course-finder .btn-default:before { border-right: 5px solid #8e00c9; }
 .newsletter-form .btn-default { background-color: #16a990; }
 .newsletter-form .btn-default:before { border-right: 5px solid #16a990; }
 #course-finder .btn-default:hover, #course-finder .btn-default:visited, #course-finder .btn-default:active, #course-finder .btn-default.active, 

@@ -1,5 +1,5 @@
 <div class="col-md-4 col-sm-12 col-xs-12">                       
-<div class="panel panel-primary text-center no-boder bg-color-gray">
+<div class="panel panel-primary text-center no-boder bg-color-gray purple-text">
     <div class="panel-body">
         <i class="fa fa-list fa-5x"></i>
         <h3><?php echo $products ?> Products </h3>
@@ -9,7 +9,7 @@
     </div></div></div>
 
 <div class="col-md-4 col-sm-12 col-xs-12">                       
-<div class="panel panel-primary text-center no-boder bg-color-gray">
+<div class="panel panel-primary text-center no-boder bg-color-gray purple-text">
     <div class="panel-body">
         <i class="fa fa-pencil fa-5x"></i>
         <h3><?php echo $blogs ?> Blogs </h3>
@@ -19,7 +19,7 @@
     </div></div></div>
 
 <div class="col-md-4 col-sm-12 col-xs-12">                       
-<div class="panel panel-primary text-center no-boder bg-color-gray">
+<div class="panel panel-primary text-center no-boder bg-color-gray purple-text">
     <div class="panel-body">
         <i class="fa fa-image fa-5x"></i>
         <h3><?php echo $galleries ?> Galleries </h3>
@@ -30,7 +30,7 @@
        
 
 <div class="col-md-3 col-sm-12 col-xs-12">                       
-<div class="panel panel-primary text-center no-boder bg-color-gray">
+<div class="panel panel-primary text-center no-boder bg-color-gray purple-text">
     <div class="panel-body">
         <i class="fa fa-user-md fa-5x"></i>
         <h3><?php echo $clients ?> Clients </h3>
@@ -40,7 +40,7 @@
     </div></div></div>  
 
 <div class="col-md-3 col-sm-12 col-xs-12">                       
-<div class="panel panel-primary text-center no-boder bg-color-gray">
+<div class="panel panel-primary text-center no-boder bg-color-gray purple-text">
     <div class="panel-body">
         <i class="fa fa-user fa-5x"></i>
         <h3><?php echo $admins ?> Admins </h3>
@@ -50,7 +50,7 @@
     </div></div></div>      
 
 <div class="col-md-3 col-sm-12 col-xs-12">                       
-<div class="panel panel-primary text-center no-boder bg-color-gray">
+<div class="panel panel-primary text-center no-boder bg-color-gray purple-text">
     <div class="panel-body">
         <i class="fa fa-file fa-5x"></i>
         <h3><?php echo $downloads ?> File </h3>
@@ -60,7 +60,7 @@
     </div></div></div>     
 
 <div class="col-md-3 col-sm-12 col-xs-12">                       
-<div class="panel panel-primary text-center no-boder bg-color-gray">
+<div class="panel panel-primary text-center no-boder bg-color-gray purple-text">
     <div class="panel-body">
         <i class="fa fa-list fa-5x"></i>
         <h3><?php echo $contacts ?> Inbox </h3>

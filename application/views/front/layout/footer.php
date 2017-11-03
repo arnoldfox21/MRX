@@ -43,7 +43,7 @@
                                 
                                 <div itemscope itemtype=""> 
                                 
-                                    <h2 class="title-median m-contact-subject white-text" itemprop="name">Kantor <?php echo $site['nameweb'];?></h2>
+                                    <h2 class="title-median m-contact-subject white-text" itemprop="name"> <?php echo $site['nameweb'];?></h2>
                                 
                                     <div class="m-contact-address" itemprop="address" itemscope itemtype="">
                                         <span class="m-contact-street" itemprop="street-address"><?php echo $site['address'];?></span>
