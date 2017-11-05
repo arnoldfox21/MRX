@@ -1,10 +1,10 @@
-                <div class="col-lg-4 col-md-4"><!-- recent news wrapper -->
+                <div class="col-lg-4 col-md-4">
                     
-                    <div class="col-padded"><!-- inner custom column -->
+                    <div class="col-padded">
                     
-                        <ul class="list-unstyled clear-margins"><!-- widgets -->
+                        <ul class="list-unstyled clear-margins">
                         
-                            <li class="widget-container widget_recent_news"><!-- widgets list -->
+                            <li class="widget-container widget_recent_news">
                     
                                 <h1 class="title-widget">Blog Terbaru</h1>
                                 
@@ -15,7 +15,7 @@
                                 ?>
                                     <li class="recent-news-wrap">
                                 
-                                        <h1 class="title-median"><a href="<?php echo base_url('blog/detil/'.$blog['slug_blog']);?>" title="<?php echo $blog['title'];?>"><?php echo $blog['title'];?></a></h1>
+                                        <h1 class="title-median"><a href="<?php echo base_url('blog/detail/'.$blog['slug_blog']);?>" title="<?php echo $blog['title'];?>"><?php echo $blog['title'];?></a></h1>
                                         
                                         <div class="recent-news-meta">
                                             <div class="recent-news-date"><?php echo date('l, d/m/Y', strtotime($blog['date_post'])); ?></div>
@@ -23,13 +23,13 @@
                                         
                                         <div class="recent-news-content clearfix">
                                             <figure class="recent-news-thumb">
-                                                <a href="<?php echo base_url('blog/detil/'.$blog['slug_blog']);?>" title="<?php echo $blog['title'];?>">
+                                                <a href="<?php echo base_url('blog/detail/'.$blog['slug_blog']);?>" title="<?php echo $blog['title'];?>">
                                                 <img src="<?php echo base_url('assets/upload/image/'.$blog['image']);?>" style="height:90px"/></a>
                                             </figure>
                                             <div class="recent-news-text">
                                                 <p>
                                                 <?php
-                                                    $out = strlen($blog['content']) > 50 ? substr($blog['content'],0,50).'... <a href="#" class="moretag">detil Selengkapnya</a> ' : $blog['content'];
+                                                    $out = strlen($blog['content']) > 50 ? substr($blog['content'],0,50).'... <a href="'.base_url('blog/detail/'.$blog['slug_blog']).'" class="moretag">Read more</a> ' : $blog['content'];
                                                     echo $out;
                                                 ?>                                             
                                                 </p>
@@ -40,10 +40,9 @@
                                 <?php }} ?>
                                 </ul>
                                 
-                            </li><!-- widgets list end -->
+                            </li>
                         
-                        </ul><!-- widgets end -->
+                        </ul>
+                    </div>
                     
-                    </div><!-- inner custom column end -->
-                    
-                </div><!-- recent news wrapper end -->
+                </div>

@@ -18,7 +18,7 @@
 $_CONFIG = array(
 
 
-// GENERAL SETTINGS
+
 
     'disabled' => false,
     'uploadURL' => "../upload",
@@ -27,19 +27,19 @@ $_CONFIG = array(
 
     'types' => array(
 
-    // (F)CKEditor types
+
         'files'   =>  "",
         'flash'   =>  "swf",
         'images'  =>  "*img",
 
-    // TinyMCE types
+
         'file'    =>  "",
         'media'   =>  "swf flv avi mpg mpeg qt mov wmv asf rm",
         'image'   =>  "*img",
     ),
 
 
-// IMAGE SETTINGS
+
 
     'imageDriversPriority' => "imagick gmagick gd",
     'jpegQuality' => 90,
@@ -54,14 +54,12 @@ $_CONFIG = array(
     'watermark' => "",
 
 
-// DISABLE / ENABLE SETTINGS
 
     'denyZipDownload' => false,
     'denyUpdateCheck' => false,
     'denyExtensionRename' => false,
 
 
-// PERMISSION SETTINGS
 
     'dirPerms' => 0755,
     'filePerms' => 0644,
@@ -86,7 +84,6 @@ $_CONFIG = array(
     'deniedExts' => "exe com msi bat cgi pl php phps phtml php3 php4 php5 php6 py pyc pyo pcgi pcgi3 pcgi4 pcgi5 pchi6",
 
 
-// MISC SETTINGS
 
     'filenameChangeChars' => array(/*
         ' ' => "_",
@@ -105,7 +102,6 @@ $_CONFIG = array(
     'cookiePrefix' => 'KCFINDER_',
 
 
-// THE FOLLOWING SETTINGS CANNOT BE OVERRIDED WITH SESSION SETTINGS
 
     '_normalizeFilenames' => false,
     '_check4htaccess' => true,

@@ -36,7 +36,7 @@ echo validation_errors('<div class="alert alert-success">','</div>');
         <td><?php echo $i; ?></td>
         <td>
         <?php echo substr(strip_tags($list['title']),0,20) ?> <br> 
-        <a href="<?php echo base_url('blog/detil/'.$list['slug_blog']) ?>">
+        <a href="<?php echo base_url('blog/detail/'.$list['slug_blog']) ?>">
         <?php echo substr(strip_tags($list['slug_blog']),0,20) ?><sup><i class="fa fa-link"></i></sup>
         </a>
         </td>        

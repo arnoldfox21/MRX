@@ -106,7 +106,7 @@
             $this->db->from('blogs');
             $this->db->where(array('status' => 'publish'));            
             $this->db->join('categories','categories.category_id = blogs.category_id','LEFT');
-            $this->db->order_by('blog_id','ASC');
+            $this->db->order_by('blog_id','DESC');
             $this->db->limit($limit,$start);
             $query = $this->db->get();
             return $query->result_array();

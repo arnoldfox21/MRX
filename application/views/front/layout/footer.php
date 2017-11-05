@@ -12,11 +12,11 @@
                         
                             <li class="widget-container widget_nav_menu"><!-- widgets list -->
                     
-                                <h1 class="title-widget white-text">Navigasi</h1>                                
+                                <h1 class="title-widget white-text title-widget-white">Navigasi</h1>                                
                                 <ul>
                                     <li><a  href="<?php echo base_url('profil/harga');?>" title="menu item"><div class="white-text">Daftar Harga</div></a></li>
                                     <li><a href="<?php echo base_url('profil/klien');?>" title="menu item"><div class="white-text">Daftar Klien</div></a></li>
-                                    <li><a href="<?php echo base_url('produk');?>" title="menu item"><div class="white-text">Produk Kami</div></a></li>
+                                    <li><a href="<?php echo base_url('produk');?>" title="menu item"><div class="white-text">Produk</div></a></li>
                                     <li><a href="<?php echo base_url('galeri');?>" title="menu item"><div class="white-text">Album Foto</div></a></li>
                                     <li><a href="<?php echo base_url('blog');?>" title="menu item"><div class="white-text">Blog</div></a></li>
                                     <li><a href="<?php echo base_url('download');?>" title="menu item"><div class="white-text">Download File</div></a></li>
@@ -39,7 +39,7 @@
                         
                             <li class="widget-container widget_recent_news"><!-- widgets list -->
                     
-                                <h1 class="title-widget white-text"><?php echo $site['nameweb'];?> Kontak</h1>
+                                <h1 class="title-widget white-text title-widget-white"><?php echo $site['nameweb'];?> Kontak</h1>
                                 
                                 <div itemscope itemtype=""> 
                                 
@@ -59,9 +59,7 @@
                                 </div>
                                 
                                 <div class="social-icons">
-                                
                                     <ul class="list-unstyled list-inline">
-                                    
                                         <li><a href="<?php echo $site['twitter'];?>" title="Twitter"><i class="fa fa-twitter"></i></a></li>
                                         <li><a href="<?php echo $site['facebook'];?>" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                                     
@@ -85,7 +83,7 @@
                         
                             <li class="widget-container widget_sofa_flickr"><!-- widgets list -->
                     
-                                <h1 class="title-widget white-text">Album Foto</h1>
+                                <h1 class="title-widget white-text title-widget-white">Album Foto</h1>
                                 
                                 <ul class="k-flickr-photos list-unstyled">
                                 <?php
@@ -119,46 +117,64 @@
                 <div class="col-lg-12">
                     <center>
                     <p class="copy-text text-inverse white-text">
-                    &copy; 2017 <?php echo $site['nameweb'];?>
+                   Copyright &copy; 2017 <?php echo $site['nameweb'];?>
                     </p>
                     </center>
                 
                 </div>
             
-            </div><!-- row end -->
+            </div>
         
-        </div><!-- container end -->
+        </div>
     
-    </div><!-- subfooter end -->
+    </div>
 
-    <!-- jQuery -->
+    
     <script src="<?php echo base_url();?>assets/front/jQuery/jquery-2.1.1.min.js"></script>
     <script src="<?php echo base_url();?>assets/front/jQuery/jquery-migrate-1.2.1.min.js"></script>
-    
-    <!-- Bootstrap -->
     <script src="<?php echo base_url();?>assets/front/bootstrap/js/bootstrap.min.js"></script>
-    
-    <!-- Drop-down -->
     <script src="<?php echo base_url();?>assets/front/js/dropdown-menu/dropdown-menu.js"></script>
-    
-    <!-- Fancybox -->
     <script src="<?php echo base_url();?>assets/front/js/fancybox/jquery.fancybox.pack.js"></script>
-    <script src="<?php echo base_url();?>assets/front/js/fancybox/jquery.fancybox-media.js"></script><!-- Fancybox media -->
-    
-    <!-- Responsive videos -->
+    <script src="<?php echo base_url();?>assets/front/js/fancybox/jquery.fancybox-media.js"></script>
     <script src="<?php echo base_url();?>assets/front/js/jquery.fitvids.js"></script>
-    
-    <!-- Audio player -->
     <script src="<?php echo base_url();?>assets/front/js/audioplayer/audioplayer.min.js"></script>
-    
-    <!-- Pie charts -->
     <script src="<?php echo base_url();?>assets/front/js/jquery.easy-pie-chart.js"></script>
-    
-    <!-- Google Maps -->
     <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
-    
-    <!-- Theme -->
     <script src="<?php echo base_url();?>assets/front/js/theme.js"></script>
-    
+    <script type="text/javascript">
+
+        function myFuckcomment() {
+            
+            document.getElementById("delta").classList.remove('hidden');
+            document.getElementById("submit").attr('disabled');
+            var name = document.getElementById("nama").value;
+            var email = document.getElementById("mail").value;
+            var pesan = document.getElementById("comment").value;
+         
+            var pid = document.getElementById("pid").value;
+
+            var dataString = {'name1': name, 'email1': email, 'pesan1': pesan, 'comit1': comit, 'pid1': pid };
+            
+                $.ajax({
+                type: "POST",
+                url: "<?php echo base_url('blog/replyBlog');?>",
+                data: dataString,
+                success: function(data) {
+                    if(data == 'sukses'){
+                        document.getElementById("alpha").classList.remove('hidden');
+                        document.getElementById("delta").classList.add('hidden');
+                    }else{
+                        document.getElementById("beta").classList.remove('hidden'); 
+                        document.getElementById("delta").classList.add('hidden');
+                    }
+                     alert(data);
+                    }
+                });
+
+            
+            return false;
+        }
+
+    </script>
  </body>
 </html>

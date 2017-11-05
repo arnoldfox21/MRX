@@ -1,37 +1,16 @@
 <?php
 
-/** This file is part of KCFinder project
-  *
-  *      @desc This file is included first, before each other
-  *   @package KCFinder
-  *   @version 3.12
-  *    @author Pavel Tzonkov <sunhater@sunhater.com>
-  * @copyright 2010-2014 KCFinder Project
-  *   @license http://opensource.org/licenses/GPL-3.0 GPLv3
-  *   @license http://opensource.org/licenses/LGPL-3.0 LGPLv3
-  *      @link http://kcfinder.sunhater.com
-  *
-  * This file is the place you can put any code (at the end of the file),
-  * which will be executed before any other. Suitable for:
-  *     1. Set PHP ini settings using ini_set()
-  *     2. Custom session save handler with session_set_save_handler()
-  *     3. Any custom integration code. If you use any global variables
-  *        here, they can be accessed in conf/config.php via $GLOBALS
-  *        array. It's recommended to use constants instead.
-  */
 
-
-// PHP VERSION CHECK
 if (!preg_match('/^(\d+\.\d+)/', PHP_VERSION, $ver) || ($ver[1] < 5.3))
     die("You are using PHP " . PHP_VERSION . " when KCFinder require at least version 5.3.0! Some systems has an option to change the active PHP version. Please refer to your hosting provider or upgrade your PHP distribution.");
 
 
-// SAFE MODE CHECK
+
 if (ini_get("safe_mode"))
     die("The \"safe_mode\" PHP ini setting is turned on! You cannot run KCFinder in safe mode.");
 
 
-// CMS INTEGRATION
+
 if (isset($_GET['cms']) &&
     (basename($_GET['cms']) == $_GET['cms']) &&
     is_file("integration/{$_GET['cms']}.php")
@@ -39,11 +18,10 @@ if (isset($_GET['cms']) &&
     require "integration/{$_GET['cms']}.php";
 
 
-// REGISTER AUTOLOAD FUNCTION
+
 require "core/autoload.php";
 
 
-// json_encode() IMPLEMENTATION IF JSON EXTENSION IS MISSING
 if (!function_exists("json_encode")) {
 
     function json_encode($data) {

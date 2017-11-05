@@ -77,7 +77,7 @@ class Blog extends CI_Controller {
 	}	
 
 	
-	public function detil($slugBlog) {
+	public function detail($slugBlog) {
 
 		$site  		= $this->mConfig->list_config();
 		$blog 		= $this->mBlogs->readBlog($slugBlog);

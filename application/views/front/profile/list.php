@@ -80,14 +80,14 @@
                                         
                                         <div class="recent-news-content clearfix">
                                             <figure class="recent-news-thumb">
-                                                <a href="<?php echo base_url('blog/detil/'.$blog['slug_blog']);?>" title="<?php echo $blog['title'];?>">
+                                                <a href="<?php echo base_url('blog/detail/'.$blog['slug_blog']);?>" title="<?php echo $blog['title'];?>">
                                                 <img src="<?php echo base_url('assets/upload/image/'.$blog['image']);?>" class="attachment-thumbnail wp-post-image" alt="Thumbnail 1" /></a>
                                             </figure>
                                             <div class="recent-news-text">
                                                 <div class="recent-news-meta">
                                                     <div class="recent-news-date"><?php echo date('l, d/m/Y', strtotime($blog['date_post'])); ?></div>
                                                 </div>
-                                                <h1 class="title-median"><a href="<?php echo base_url('blog/detil/'.$blog['slug_blog']);?>" title="<?php echo $blog['title'];?>"><?php echo $blog['title'];?></a></h1>
+                                                <h1 class="title-median"><a href="<?php echo base_url('blog/detail/'.$blog['slug_blog']);?>" title="<?php echo $blog['title'];?>"><?php echo $blog['title'];?></a></h1>
                                             </div>
                                         </div>
                                     

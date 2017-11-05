@@ -28,18 +28,18 @@
                         	<div class="k-article-summary col-lg-12 col-md-12">
                     
                                 <figure class="news-featured-image">	
-                                    <a href="<?php echo base_url('produk/detil/'.$list['slug_product']);?>" title="<?php echo $list['product_name'];?>"><img src="<?php echo base_url('assets/upload/image/'.$list['image']);?>" alt="Featured image 4" class="img-responsive" /></a>
+                                    <a href="<?php echo base_url('produk/detail/'.$list['slug_product']);?>" title="<?php echo $list['product_name'];?>"><img src="<?php echo base_url('assets/upload/image/'.$list['image']);?>" alt="Featured image 4" class="img-responsive" /></a>
                                 </figure>
                                 
                                 <div class="news-title-meta">
                                     <h1 class="page-title">
-                                    <a href="<?php echo base_url('produk/detil/'.$list['slug_product']);?>" title="<?php echo $list['product_name'];?>"><?php echo $list['product_name'];?></a></h1>
+                                    <a href="<?php echo base_url('produk/detail/'.$list['slug_product']);?>" title="<?php echo $list['product_name'];?>"><?php echo $list['product_name'];?></a></h1>
                                 </div>
                                 
                                 <div class="news-body">
                                     <p>
                                         <?php
-                                            $out = strlen($list['product_description']) > 150 ? substr($list['product_description'],0,150).'... <a href="'. base_url('produk/detil/'.$list['slug_product']).'" class="moretag">Lihat Selengkapnya</a> ' : $list['product_description'];
+                                            $out = strlen($list['product_description']) > 150 ? substr($list['product_description'],0,150).'... <a href="'. base_url('produk/detail/'.$list['slug_product']).'" class="moretag">Lihat Selengkapnya</a> ' : $list['product_description'];
                                             echo $out;
                                         ?>  
                                     </p>
@@ -100,14 +100,14 @@
                                         
                                         <div class="recent-news-content clearfix">
                                             <figure class="recent-news-thumb">
-                                                <a href="<?php echo base_url('blog/detil/'.$blog['slug_blog']);?>" title="<?php echo $blog['title'];?>">
+                                                <a href="<?php echo base_url('blog/detail/'.$blog['slug_blog']);?>" title="<?php echo $blog['title'];?>">
                                                 <img src="<?php echo base_url('assets/upload/image/'.$blog['image']);?>" class="attachment-thumbnail wp-post-image" alt="Thumbnail 1" /></a>
                                             </figure>
                                             <div class="recent-news-text">
                                                 <div class="recent-news-meta">
                                                     <div class="recent-news-date"><?php echo date('l, d/m/Y', strtotime($blog['date_post'])); ?></div>
                                                 </div>
-                                                <h1 class="title-median"><a href="<?php echo base_url('blog/detil/'.$blog['slug_blog']);?>" title="<?php echo $blog['title'];?>"><?php echo $blog['title'];?></a></h1>
+                                                <h1 class="title-median"><a href="<?php echo base_url('blog/detail/'.$blog['slug_blog']);?>" title="<?php echo $blog['title'];?>"><?php echo $blog['title'];?></a></h1>
                                             </div>
                                         </div>
                                     

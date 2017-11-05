@@ -78,7 +78,7 @@ class Blogs extends CI_Controller {
 		$this->load->view('admin/layout/wrapper',$data);
 		}else{
 				$upload_data				= array('uploads' =>$this->upload->data());
-				// Image Editor
+				
 				$config['image_library']	= 'gd2';
 				$config['source_image'] 	= './assets/upload/image/'.$upload_data['uploads']['file_name']; 
 				$config['new_image'] 		= './assets/upload/image/thumbs/';

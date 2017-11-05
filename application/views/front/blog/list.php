@@ -28,12 +28,12 @@
                         	<div class="k-article-summary col-lg-12 col-md-12">
                     
                                 <figure class="news-featured-image">	
-                                    <a href="<?php echo base_url('blog/detil/'.$list['slug_blog']);?>" title="<?php echo $list['title'];?>"><img src="<?php echo base_url('assets/upload/image/'.$list['image']);?>" alt="Featured image 4" class="img-responsive" /></a>
+                                    <a href="<?php echo base_url('blog/detail/'.$list['slug_blog']);?>" title="<?php echo $list['title'];?>"><img src="<?php echo base_url('assets/upload/image/'.$list['image']);?>" alt="Featured image 4" class="img-responsive" /></a>
                                 </figure>
                                 
                                 <div class="news-title-meta">
                                     <h1 class="page-title">
-                                    <a href="<?php echo base_url('blog/detil/'.$list['slug_blog']);?>" title="<?php echo $list['title'];?>"><?php echo $list['title'];?></a></h1>
+                                    <a href="<?php echo base_url('blog/detail/'.$list['slug_blog']);?>" title="<?php echo $list['title'];?>"><?php echo $list['title'];?></a></h1>
                                     <div class="news-meta">
                                         <span class="news-meta-date"><?php echo date('l, d/m/Y', strtotime($list['date_post'])); ?></span>
                                         <span class="news-meta-category"><a href="<?php echo base_url('blog/category/'.$list['slug_category']);?>" title="News"><?php echo $list['category_name'];?></a></span>
@@ -41,14 +41,14 @@
                                             $blog_id = $list['blog_id'];
                                             $count = $this->mBlogs->countCommentByBlog($blog_id);
                                         ?>
-                                        <span class="news-meta-comments"><a href="<?php echo base_url('blog/detil/'.$list['slug_blog']);?>" title="<?php echo $count;?> comments"><?php echo $count;?> comments</a></span>
+                                        <span class="news-meta-comments"><a href="<?php echo base_url('blog/detail/'.$list['slug_blog']);?>" title="<?php echo $count;?> comments"><?php echo $count;?> comments</a></span>
                                     </div>
                                 </div>
                                 
                                 <div class="news-body">
                                     <p>
                                         <?php
-                                            $out = strlen($list['content']) > 150 ? substr($list['content'],0,150).'... <a href="'. base_url('blog/detil/'.$list['slug_blog']).'" class="moretag">detil Selengkapnya</a> ' : $list['content'];
+                                            $out = strlen($list['content']) > 150 ? substr($list['content'],0,150).'... <a href="'. base_url('blog/detail/'.$list['slug_blog']).'" class="moretag">detail Selengkapnya</a> ' : $list['content'];
                                             echo $out;
                                         ?>  
                                     </p>                                    
@@ -119,7 +119,7 @@
                                  ?>
                                     <li class="up-event-wrap">
                                 
-                                        <h1 class="title-median"><a href="<?php echo base_url('blog/detil/'.$last['slug_blog']);?>" title="<?php echo $last['title'];?>"><?php echo $last['title'];?></a></h1>
+                                        <h1 class="title-median"><a href="<?php echo base_url('blog/detail/'.$last['slug_blog']);?>" title="<?php echo $last['title'];?>"><?php echo $last['title'];?></a></h1>
                                         
                                         <div class="up-event-meta clearfix">
                                             <div class="up-event-date"><?php echo date('l, d/m/Y', strtotime($last['date_post'])); ?></div>
@@ -127,7 +127,7 @@
                                         
                                     <p>
                                         <?php
-                                            $out = strlen($last['content']) > 150 ? substr($last['content'],0,150).'... <a href="'. base_url('blog/detil/'.$last['slug_blog']).'" class="moretag">detil Selengkapnya</a> ' : $last['content'];
+                                            $out = strlen($last['content']) > 150 ? substr($last['content'],0,150).'... <a href="'. base_url('blog/detail/'.$last['slug_blog']).'" class="moretag">detail Selengkapnya</a> ' : $last['content'];
                                             echo $out;
                                         ?>  
                                     </p>

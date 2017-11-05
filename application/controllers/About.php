@@ -8,7 +8,6 @@ class About extends CI_Controller {
 	{
 		
 		$site = $this->list_model->list_config();
-
 		$data = array(	'site' 	=> $site,
 						'isi' 	=> 'about');
 		$this->load->view('template/wrapper',$data);

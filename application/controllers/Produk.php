@@ -32,7 +32,7 @@ class Produk extends CI_Controller {
 	}
 
 	
-	public function detil($slugProduct) {
+	public function detail($slugProduct) {
 
 		$site  		= $this->mConfig->list_config();
 		$categories = $this->mCategories->listCategories();
@@ -44,7 +44,7 @@ class Produk extends CI_Controller {
 						'categories'=> $categories,
 						'product'	=> $product,
 						'blogs'		=> $blogs,
-						'isi'		=> 'front/produk/detil');
+						'isi'		=> 'front/produk/detail');
 		$this->load->view('front/layout/wrapper',$data);
 	}	
 }

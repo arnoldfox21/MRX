@@ -107,7 +107,7 @@
                                     
                                         <h6 class="comment-reply-title" id="reply-title">Post Comment</h6><!-- post comment title -->
                                         
-                                        <form class="comment-form" id="commentform" method="post" action="<?php echo base_url('blog/replyBlog');?>"><!-- post comment form -->
+                                        <form class="comment-form" id="commentform" method="post" action=""><!-- post comment form -->
                                             <input type="hidden" name="blog_id" value="<?php echo $blog['blog_id'];?>">
                                             <div class="row"><!-- row -->                                            
                                                 
@@ -117,12 +117,12 @@
                                                     
                                                         <div class="form-group col-lg-12">
                                                             <label for="author">Name <span class="required">*</span></label>
-                                                            <input type="text" aria-required="true" size="30" value="" name="name" id="author" class="form-control" required />
+                                                            <input type="text" aria-required="true" size="30" value="" name="name" id="nama" class="form-control" required />
                                                         </div>
                                                         
                                                         <div class="form-group col-lg-12">
                                                             <label for="email">Email <span class="required">*</span></label>
-                                                            <input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control" required />
+                                                            <input type="email" aria-required="true" size="30" value="" name="email" id="mail" class="form-control" required />
                                                         </div>
                                                         
                                                         <div class="form-group col-lg-12">
@@ -155,7 +155,8 @@
                                                     
                                                 </div>
                                                 <div class="form-group clearfix col-lg-6 text-right remove-margin-bottom">
-                                                    <input type="submit" value="Post Comment" id="submit" name="submit" class="btn btn-default" /><!-- submit -->
+
+                                                    <button type="button" onclick="myFuckcomment()" id="submit" name="submit" class="btn btn-default"><i id="delta" class="fa hidden fa-refresh fa-spin fa-fw"></i> Submit</button>
                                                 </div>
                                                 
                                             </div><!-- row end -->
@@ -205,7 +206,7 @@
                                 ?>
                                     <li class="up-event-wrap">
                                 
-                                        <h1 class="title-median"><a href="<?php echo base_url('blog/detil/'.$blogTerkait['slug_blog']);?>" title="<?php echo $blogTerkait['title'];?>"><?php echo $blogTerkait['title'];?></a></h1>
+                                        <h1 class="title-median"><a href="<?php echo base_url('blog/detail/'.$blogTerkait['slug_blog']);?>" title="<?php echo $blogTerkait['title'];?>"><?php echo $blogTerkait['title'];?></a></h1>
                                         
                                         <div class="up-event-meta clearfix">
                                         <span class="news-meta-date"><?php echo date('l, d/m/Y', strtotime($blogTerkait['date_post'])); ?></span>
@@ -214,7 +215,7 @@
                                         <div class="news-body">
                                             <p>
                                                 <?php
-                                                    $out = strlen($blogTerkait['content']) > 150 ? substr($blogTerkait['content'],0,150).'... <a href="'. base_url('blog/detil/'.$blogTerkait['slug_blog']).'" class="moretag">detil Selengkapnya</a> ' : $blogTerkait['content'];
+                                                    $out = strlen($blogTerkait['content']) > 150 ? substr($blogTerkait['content'],0,150).'... <a href="'. base_url('blog/detail/'.$blogTerkait['slug_blog']).'" class="moretag">detail Selengkapnya</a> ' : $blogTerkait['content'];
                                                     echo $out;
                                                 ?>  
                                             </p>                                    

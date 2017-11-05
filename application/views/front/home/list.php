@@ -15,7 +15,7 @@
             </div><!-- row end -->
             
             <?php include('slider.php');?>
-            
+         <div style="background-color: #ffffff">   
             <div class="row no-gutter"><!-- row -->
                 
                 <?php include ('produk.php');?>
@@ -27,6 +27,6 @@
             </div><!-- row end -->
         
         </div><!-- container end -->
-    
+    </div>
     </div><!-- content wrapper end -->
   

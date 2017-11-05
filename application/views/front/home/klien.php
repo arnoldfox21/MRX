@@ -7,7 +7,7 @@
                             
                             <li class="widget-container widget_recent_news"><!-- widgets list -->
                     
-                                <h1 class="title-widget">Klien Kami</h1>
+                                <h1 class="title-widget">Client</h1>
                                 
                                 <ul class="list-unstyled">
                                 

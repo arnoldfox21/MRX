@@ -6,7 +6,7 @@
                         
                             <li class="widget-container widget_up_events"><!-- widgets list -->
                     
-                                <h1 class="title-widget">Produk Kami</h1>
+                                <h1 class="title-widget">Produk</h1>
                                 
                                 <ul class="list-unstyled">
 
@@ -17,7 +17,7 @@
                                     <li class="up-event-wrap">
                                 
                                         <h1 class="title-median">
-                                        <a href="<?php echo base_url('produk/detil/'.$product['slug_product']);?>" title="<?php echo $product['product_name'];?>"><?php echo $product['product_name'];?></a></h1>
+                                        <a href="<?php echo base_url('produk/detail/'.$product['slug_product']);?>" title="<?php echo $product['product_name'];?>"><?php echo $product['product_name'];?></a></h1>
                                         
                                         <div class="up-event-meta clearfix">
                                             <div class="up-event-date"><?php echo date('l, d/m/Y', strtotime($product['date'])); ?></div>
