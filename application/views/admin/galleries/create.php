@@ -42,13 +42,13 @@ $(function() {
     $("#file").on("change", function()
     {
         var files = !!this.files ? this.files : [];
-        if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
+        if (!files.length || !window.FileReader) return; 
         
-        if (/^image/.test( files[0].type)){ // only image file
-            var reader = new FileReader(); // instance of the FileReader
-            reader.readAsDataURL(files[0]); // read the local file
+        if (/^image/.test( files[0].type)){ 
+            var reader = new FileReader(); 
+            reader.readAsDataURL(files[0]); 
             
-            reader.onloadend = function(){ // set image data as background of div
+            reader.onloadend = function(){ 
                 $("#imagePreview").css("background-image", "url("+this.result+")");
             }
         }
@@ -58,21 +58,19 @@ $(function() {
 
 
 <?php
-// Session 
+
 if($this->session->flashdata('sukses')) { 
 	echo '<div class="alert alert-success">';
 	echo $this->session->flashdata('sukses');
 	echo '</div>';
 } 
 
-// File upload error
 if(isset($error)) {
 	echo '<div class="alert alert-success">';
 	echo $error;
 	echo '</div>';
 }
 
-// Error
 echo validation_errors('<div class="alert alert-success">','</div>'); 
 ?>
 
@@ -99,7 +97,7 @@ echo validation_errors('<div class="alert alert-success">','</div>');
         <select name="position" class="form-control">
             <option value="slider">Home - Slider</option>                
             <option value="profil">Profil Page</option>                
-            <option value="harga">Daftar Harga</option>                
+            <option value="question">Question</option>                
             <option value="footer">Footer - Grid Image</option>                           
         </select>
     </div>      

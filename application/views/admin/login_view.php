@@ -75,11 +75,11 @@ echo validation_errors('<div class="alert alert-success">','</div>');
 </div>
 
 <script src="<?php echo base_url() ?>assets/admin/assets/js/jquery-1.10.2.js"></script>
-<!-- BOOTSTRAP SCRIPTS -->
+
 <script src="<?php echo base_url() ?>assets/admin/assets/js/bootstrap.min.js"></script>
-<!-- METISMENU SCRIPTS -->
+
 <script src="<?php echo base_url() ?>assets/admin/assets/js/jquery.metisMenu.js"></script>
-<!-- CUSTOM SCRIPTS -->
+
 <script src="<?php echo base_url() ?>assets/admin/assets/js/custom.js"></script>
 
 </body>

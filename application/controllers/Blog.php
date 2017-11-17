@@ -23,7 +23,6 @@ class Blog extends CI_Controller {
 		$page 		= ($this->uri->segment(3)) ? ($this->uri->segment(3) - 1) * $config['per_page'] : 0;
 		$blogs 		= $this->mBlogs->perPageBlogs($config['per_page'], $page);
 			
-		
 		$data = array(	'title'		=> 'Blog - '.$site['nameweb'],
 						'site'		=> $site,
 						'blogs'		=> $blogs,
@@ -79,37 +78,39 @@ class Blog extends CI_Controller {
 	
 	public function detail($slugBlog) {
 
+		$this->load->helper('smiley');
+        $this->load->library('table');
 		$site  		= $this->mConfig->list_config();
 		$blog 		= $this->mBlogs->readBlog($slugBlog);
 		$categories = $this->mCategories->listCategories();
 		$comments   = $this->mBlogs->listCommentsByBlog($slugBlog);
         $blogId 	= $blog['blog_id'];
         $count  	= $this->mBlogs->countCommentByBlog($blogId);                                            		
-		
+        $template = array('table_open' => '<table class="table">');
+        $this->table->set_template($template);
+        $image_array = get_clickable_smileys(base_url().'assets/front/img/smileys/', 'comment');
+        $col_array = $this->table->make_columns($image_array, 8);
+        $d = $this->table->generate($col_array);
+
 		$data = array(	'title'		=> $blog['title'].' - '.$site['nameweb'],
 						'site'		=> $site,
 						'blog'		=> $blog,
 						'categories'=> $categories,
 						'count'		=> $count,
 						'comments'	=> $comments,
+						'smile'     => $d,
 						'isi'		=> 'front/blog/read');
 		$this->load->view('front/layout/wrapper',$data);
 	}
-
-  	
 	public function replyBlog(){
-
-		if ($this->input->post('message')){
-			$this->mBlogs->replyBlog();
-		}
-
-		$this->session->set_flashdata('sukses','Success');  	
-		header('Location: ' . $_SERVER['HTTP_REFERER']);
+		$this->mBlogs->replyBlog();
+		echo json_encode([
+			'status' => 200,
+			'message' => 'success'
+		]);
   	}	
-
 	
 	public function kategori($slugBlog) {
-
 		$site  		= $this->mConfig->list_config();
 		$categories = $this->mCategories->listCategories();
 		$lastBlogs 	= $this->mBlogs->listLastBlogsPub();

@@ -68,7 +68,7 @@
                                 <h1 class="title-widget">Navigasi</h1>
                                 
                                 <ul>
-                                    <li><a href="<?php echo base_url('profil/harga');?>" title="menu item">Daftar Harga</a></li>
+                                    <li><a href="<?php echo base_url('profil/question');?>" title="menu item">Questions</a></li>
                                     <li><a href="<?php echo base_url('profil/klien');?>" title="menu item">Daftar Klien</a></li>
                                     <li><a href="<?php echo base_url('kontak');?>" title="menu item">Kontak Kami</a></li>
                                 </ul>

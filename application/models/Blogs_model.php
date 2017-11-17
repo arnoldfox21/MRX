@@ -128,9 +128,9 @@
         public function replyBlog(){        
         $data = array( 
             'message'    => strip_tags(substr($this->input->post('message'),0,255)),
-            'comment_id' => $this->input->post('comment_id'),   
+            'comment_id' => $this->input->post('pesan'),   
             'blog_id'    => $this->input->post('blog_id'),   
-            'name'       => $this->input->post('name'),  
+            'name'       => $this->input->post('nama'),  
             'email'      => $this->input->post('email'),
             'website'    => $this->input->post('website'),
             'date_comment' => $this->input->post('date_comment'),

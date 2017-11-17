@@ -1,36 +1,36 @@
-    <div id="k-body"><!-- content wrapper -->
+    <div id="k-body">
     
-    	<div class="container"><!-- container -->
+    	<div class="container">
         
-        	<div class="row"><!-- row -->
+        	<div class="row">
             
-            	<div class="k-breadcrumbs col-lg-12 clearfix"><!-- breadcrumbs -->
+            	<div class="k-breadcrumbs col-lg-12 clearfix">
                 
                 	<ol class="breadcrumb">
                         <li><a href="<?php echo base_url('blog');?>">Blog</a></li>
                         <li class="active"><?php echo $blog['title'];?></li>
                     </ol>
                     
-                </div><!-- breadcrumbs end -->               
+                </div>         
                 
-            </div><!-- row end -->
+            </div>
             <?php
-            // Session 
+           
             if($this->session->flashdata('sukses')) { 
                 echo '<div class="alert alert-success">';
                 echo $this->session->flashdata('sukses');
                 echo '</div>';
             } 
-            // Error
+          
             echo validation_errors('<div class="alert alert-success">','</div>'); 
             ?>
-            <div class="row no-gutter"><!-- row -->
+            <div class="row no-gutter">
                 
-                <div class="col-lg-8 col-md-8"><!-- doc body wrapper -->
+                <div class="col-lg-8 col-md-8">
                 	
-                    <div class="col-padded"><!-- inner custom column -->
+                    <div class="col-padded">
                     
-                    	<div class="row gutter"><!-- row -->
+                    	<div class="row gutter">
                         
                         	<div class="col-lg-12 col-md-12">
                     
@@ -53,67 +53,72 @@
                             
                             </div>
                         
-                        </div><!-- row end -->  
+                        </div> 
                         
                         <div class="row row-splitter">
                         
                         </div> 
                         
-                        <div class="row gutter"><!-- row -->
+                        <div class="row gutter">
                         
                         	<div class="col-lg-12 col-md-12">
                             
-                            	<div id="comments"><!-- comments wrap -->
-
-                                	<h6 class="remove-margin-top">Comments ( <?php echo $count;?> )</h6><!-- comments list title -->
+                                <div id="comments">
+                                  <div id="sector_refresh">
+                                	<h6 class="remove-margin-top">Comments ( <?php echo $count;?> )</h6>
                                     
-                                    <ol class="commentlist"><!-- comments list -->
+                                    <ol class="commentlist">
                                             
                                        <?php foreach ($comments as $comment){?> 
-                                        <li class="comment" id="li-comment-3"><!-- comment -->
+                                        <li class="comment" id="li-comment-3">
                                                 
                                             <div id="comment-3">
                                                 
-                                                <div class="comment-avatar"><!-- author avatar -->
+                                                <div class="comment-avatar">
                                                     <img width="50" height="50" class="avatar avatar-50 photo" src="<?php echo base_url();?>assets/front/img/avatar.png" alt="User Avatar" />
-                                                </div><!-- author avatar end -->
+                                                </div>
                                                     
-                                                <div class="comment-content-wrap"><!-- comment content wrap -->
+                                                <div class="comment-content-wrap">
                                                 
-                                                    <div class="comment-author"><!-- author start -->
+                                                    <div class="comment-author">
                                                         <cite class="fn"><?php echo $comment['name'];?> - <i><?php echo $comment['email'];?></i><span class="label"> Post author</span></cite>
-                                                    </div><!-- author end -->
+                                                    </div>
                                     
-                                                    <div class="comment-meta commentmetadata"><!-- comment meta-->
+                                                    <div class="comment-meta commentmetadata">
                                                         <a href="#"><?php echo $comment['date_comment'];?></time></a>
-                                                    </div><!-- comment meta end -->
+                                                    </div>
                                                     
-                                                    <div class="comment-body"><!-- comment text -->
+                                                    <div class="comment-body">
                                                         <p>
-                                                        <?php echo $comment['message'];?>
+                                                  <?php $str = $comment['message'];
+                                                        $str = parse_smileys($str, 'http://localhost/kurniawanx/assets/front/img/smileys/');
+                                                        echo $str;
+                                                        ?>
+                                                        
                                                         </p>
-                                                    </div><!-- comment text end -->
+                                                    </div>
                                                     
-                                                </div><!-- comment content wrap end -->
+                                                </div>
                                                     
                                             </div>
                                     
-                                        </li><!-- comment end -->
+                                        </li>
                                         <?php } ?>
                                         
-                                    </ol><!-- comments list end -->
+                                    </ol>
+                                </div>
+                                    <div class="comment-respond" id="respond">
                                     
-                                    <div class="comment-respond" id="respond"><!-- post comment form wrap -->
-                                    
-                                        <h6 class="comment-reply-title" id="reply-title">Post Comment</h6><!-- post comment title -->
+                                        <h6 class="comment-reply-title" id="reply-title">Post Comment</h6>
                                         
-                                        <form class="comment-form" id="commentform" method="post" action=""><!-- post comment form -->
-                                            <input type="hidden" name="blog_id" value="<?php echo $blog['blog_id'];?>">
-                                            <div class="row"><!-- row -->                                            
+                                        <form class="comment-form" id="commentform" method="post" action="">
+                                            <input type="hidden" id="blog_id" value="<?php echo $blog['blog_id'];?>">
+                                            <input type="hidden" id="date_c" value="<?php echo date('Y-m-d H:i:s'); ?>">
+                                            <div class="row">                                           
                                                 
-                                                <div class="col-lg-4 col-md-4 col-sm-12"><!-- name, email, website -->
+                                                <div class="col-lg-4 col-md-4 col-sm-12">
                                                 
-                                                    <div class="row"><!-- row -->
+                                                    <div class="row">
                                                     
                                                         <div class="form-group col-lg-12">
                                                             <label for="author">Name <span class="required">*</span></label>
@@ -127,7 +132,7 @@
                                                         
                                                         <div class="form-group col-lg-12">
                                                             <label for="url">Website</label>
-                                                            <input type="url" size="30" value="" name="website" id="url" class="form-control">
+                                                            <input type="url" size="30" value="" id="url" class="form-control">
                                                         </div>
                                                         
                                                     </div><!-- row end -->
@@ -135,12 +140,13 @@
                                                 </div><!-- name, email, website end -->
                                                 
                                                 <div class="col-lg-8 col-md-8 col-sm-12"><!-- textarea -->
-                                                
-                                                    <div class="row"><!-- row -->
-                                                        
+                                                    <div class="row">
                                                         <div class="form-group clearfix col-lg-12">
                                                             <label for="comment">Comment</label>
                                                             <textarea aria-required="true" rows="8" cols="45" name="message" id="comment" class="form-control" required></textarea>
+                                                            <?php echo $smile; ?>
+                                                            <div class="g-recaptcha" data-sitekey="6LfVlzQUAAAAAH2gVmIAiWdbEf0CzCNSGno-r6vn"></div>
+                                                    
                                                         </div>
                                                         
                                                     </div><!-- row end -->
@@ -150,13 +156,14 @@
                                             </div><!-- row end -->
                                             
                                             <div class="row"><!-- row -->
-                                                <div class="form-group clearfix col-lg-6 remove-margin-bottom">
-                                                    <div class="g-recaptcha" data-sitekey="6LfVlzQUAAAAAH2gVmIAiWdbEf0CzCNSGno-r6vn"></div>
-                                                    
-                                                </div>
-                                                <div class="form-group clearfix col-lg-6 text-right remove-margin-bottom">
+                                                
+                                                <div class="form-group clearfix col-lg-12 text-right remove-margin-bottom">
 
-                                                    <button type="button" onclick="myFuckcomment()" id="submit" name="submit" class="btn btn-default"><i id="delta" class="fa hidden fa-refresh fa-spin fa-fw"></i> Submit</button>
+                                                    <button type="button" onclick="myFuckcomment()" id="submit" name="submit" class="btn btn-default">
+                                                    <div id="delta_before" class="">Post comment</div>
+                                                        <div id="delta" class="hidden"><i class="fa fa-refresh fa-spin fa-fw"></i> Sending...</div>
+                                                    </button>
+                                                    <div class="alert alert-success hidden" id="sukses"><center><i class="fa fa-check fa-2x"></i> Comment was published</center></div>
                                                 </div>
                                                 
                                             </div><!-- row end -->
@@ -240,3 +247,4 @@
     
     </div><!-- content wrapper end -->    
     <script src='https://www.google.com/recaptcha/api.js'></script>
+       <?php echo smiley_js(); ?>

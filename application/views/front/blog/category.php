@@ -11,17 +11,17 @@
                         <li class="active"><?php echo $detailCategory['category_name'];?></li>
                     </ol>
                     
-                </div><!-- breadcrumbs end -->               
+                </div>              
                 
-            </div><!-- row end -->
+            </div>
             
-            <div class="row no-gutter"><!-- row -->
+            <div class="row no-gutter">
                 
-                <div class="col-lg-8 col-md-8"><!-- doc body wrapper -->
+                <div class="col-lg-8 col-md-8">
                 	
-                    <div class="col-padded"><!-- inner custom column -->
+                    <div class="col-padded">
                     
-                    	<div class="row gutter"><!-- row -->
+                    	<div class="row gutter">
 
                             <?php foreach ($blogs as $list){?>
                         
@@ -59,22 +59,22 @@
 
                             <?php } ?>
                         
-                        </div><!-- row end -->  
+                        </div>
                         
-                        <div class="row gutter"><!-- row -->
+                        <div class="row gutter">
                         
                         	<div class="col-lg-12">
                         
-                                <ul class="pagination pull-right"><!-- pagination -->
+                                <ul class="pagination pull-right">
                                   <?php if(isset($pagin)) { echo $pagin; }  ?>        
 
-                                </ul><!-- pagination end -->
+                                </ul>
                             
                             </div>
                             
-                        </div><!-- row end -->             
+                        </div>        
                     
-                    </div><!-- inner custom column end -->
+                    </div>
                     
                 </div><!-- doc body wrapper end -->
                 

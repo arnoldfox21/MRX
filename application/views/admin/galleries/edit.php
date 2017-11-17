@@ -103,8 +103,8 @@ echo validation_errors('<div class="alert alert-success">','</div>');
               >Profil</option>}  
 
               <option value="harga" 
-              <?php if($gallery['position']=="harga") { echo "selected"; } ?>
-              >Daftar Harga</option>}
+              <?php if($gallery['position']=="question") { echo "selected"; } ?>
+              >Questions</option>}
 
               <option value="footer" 
               <?php if($gallery['position']=="footer") { echo "selected"; } ?>

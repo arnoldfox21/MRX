@@ -27,7 +27,7 @@ class Profil extends CI_Controller {
 		$gallery    = $this->mGalleries->listGalleryPubProfile();		
 		$clients	= $this->mClients->listClients();
 		
-		$data = array(	'title'		=> 'Daftar Klien - '.$site['nameweb'],
+		$data = array(	'title'		=> 'Client - '.$site['nameweb'],
 						'site'		=> $site,
 						'clients'	=> $clients,
 						'gallery'	=> $gallery,
@@ -37,7 +37,7 @@ class Profil extends CI_Controller {
 	}
 
 
-	public function harga() {
+	public function question() {
 
 		$site  		= $this->mConfig->list_config();
 		$blogs 		= $this->mBlogs->listBlogsPub();
@@ -57,13 +57,13 @@ class Profil extends CI_Controller {
 		$price 		= $this->mPrice->perPagePrice($config['per_page'], $page);
 				
 		
-		$data = array(	'title'		=> 'Daftar Harga - '.$site['nameweb'],
+		$data = array(	'title'		=> 'Questions - '.$site['nameweb'],
 						'site'		=> $site,
 						'price'		=> $price,
 						'blogs'		=> $blogs,
 						'gallery'	=> $gallery,
 						'pagin' 	=> $this->pagination->create_links(),																		
-						'isi'		=> 'front/profile/harga');
+						'isi'		=> 'front/profile/question');
 		$this->load->view('front/layout/wrapper',$data);
 	}		
 }

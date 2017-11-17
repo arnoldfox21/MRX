@@ -6,11 +6,11 @@
     
     <div id="k-head" class="container">
     
-        <div class="row"><!-- row -->
+        <div class="row">
         
             <div class="col-lg-12">
         
-                <div id="k-site-logo" class="pull-left"><!-- site logo -->
+                <div id="k-site-logo" class="pull-left">
                 
                     <h1 class="k-logo">
                         <a href="<?php echo base_url();?>" title="Home Page">
@@ -18,44 +18,42 @@
                         </a>
                     </h1>
                     
-                    <a id="mobile-nav-switch" href="#drop-down-left"><span class="alter-menu-icon"></span></a><!-- alternative menu button -->
+                    <a id="mobile-nav-switch" href="#drop-down-left"><span class="alter-menu-icon"></span></a>
             
-                </div><!-- site logo end -->
-
-                <nav id="k-menu" class="k-main-navig"><!-- main navig -->
+                </div>
+                <nav id="k-menu" class="k-main-navig">
         
                     <ul id="drop-down-left" class="k-dropdown-menu">
                         <li>
-                            <a href="<?php echo base_url();?>" title="Beranda">Home</a>
+                            <a href="<?php echo base_url();?>" title="Home">Home</a>
                         </li>
                          <li>
-                            <a href="<?php echo base_url('profil');?>" title="Tentang Kami">Profil</a>
-                            <ul class="sub-menu">
-                                <li><a href="<?php echo base_url('profil/harga');?>">Daftar Harga</a></li>
-                                <li><a href="<?php echo base_url('profil/klien');?>">Daftar Klien</a></li>
-                            </ul>
+                            <a href="<?php echo base_url('profil');?>" title="About me">Profil</a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url('produk');?>" title="Produk Kami">Produk</a>
+                            <a href="<?php echo base_url('produk');?>" title="Product">Product</a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url('galeri');?>" title="Galeri Kami">Album Foto</a>
+                            <a href="<?php echo base_url('galeri');?>" title="Galeri">Album Foto</a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url('blog');?>" title="Berita Kami">Blog</a>
+                            <a href="<?php echo base_url('blog');?>" title="Blog">Blog</a>
                         </li>                                                                                               
                         <li>
                             <a href="<?php echo base_url('download');?>" title="Download File">Download</a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url('kontak');?>" title="Kontak Kami">Kontak</a>
+                            <a href="<?php echo base_url('kontak');?>" title="Contact me">Contact</a>
+                        </li>  
+                        <li>
+                            <a href="<?php echo base_url('question');?>" title="Questions">Question</a>
                         </li>                        
                     </ul>
         
-                </nav><!-- main navig end -->
+                </nav>
             
             </div>
             
-        </div><!-- row end -->
+        </div>
     
-    </div><!-- container + head wrapper end -->
+    </div>

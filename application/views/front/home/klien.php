@@ -1,11 +1,11 @@
-                <div class="col-lg-4 col-md-4"><!-- upcoming events wrapper -->
+                <div class="col-lg-4 col-md-4">
                     
-                    <div class="col-padded col-shaded"><!-- inner custom column -->
+                    <div class="col-padded col-shaded">
                     
-                        <ul class="list-unstyled clear-margins"><!-- widgets -->
+                        <ul class="list-unstyled clear-margins">
                         
                             
-                            <li class="widget-container widget_recent_news"><!-- widgets list -->
+                            <li class="widget-container widget_recent_news">
                     
                                 <h1 class="title-widget">Client</h1>
                                 
@@ -34,10 +34,10 @@
                                 <?php }}  ?>
                                 </ul>
                                 
-                            </li><!-- widgets list end -->
+                            </li>
                         
-                        </ul><!-- widgets end -->
+                        </ul>
                     
-                    </div><!-- inner custom column end -->
+                    </div>
                     
-                </div><!-- upcoming events wrapper end -->
+                </div>

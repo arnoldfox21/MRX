@@ -16,4 +16,5 @@
     <link href="<?php echo base_url();?>assets/front/js/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css">
     <link href="<?php echo base_url();?>assets/front/js/audioplayer/audioplayer.css" rel="stylesheet" type="text/css">
     <link href="<?php echo base_url();?>assets/front/style.css" rel="stylesheet" type="text/css">
+ 
   </head>

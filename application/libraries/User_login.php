@@ -3,21 +3,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User_login {
 	
-	// SET SUPER GLOBAL
+
 	var $CI = NULL;
 	public function __construct() {
 		$this->CI =& get_instance();
 	}
 	
-	// Login
+	
 	public function login($username, $password) {
-		// Query untuk pencocokan data
+	
 		$query = $this->CI->db->get_where('users', array(
 										'username' => $username, 
 										'password' => sha1($password)
 										));
 										
-		// Jika ada hasilnya
+		
 		if($query->num_rows() == 1) {
 			$row 	= $this->CI->db->query('SELECT * FROM users WHERE username = "'.$username.'"');
 			$admin 	= $row->row();
@@ -28,7 +28,7 @@ class User_login {
 			$this->CI->session->set_userdata('id_login', uniqid(rand()));
 			$this->CI->session->set_userdata('id', $id);
 			$this->CI->session->set_userdata('status', $status);
-			// Kalau benar di redirect
+			
 		
 		if ($this->CI->session->userdata('status') == 1){	
 			redirect(base_url('users/dashboard'));
@@ -44,7 +44,7 @@ class User_login {
 		return false;
 	}
 	
-	// Cek login
+
 	public function cek_login() {
 		if($this->CI->session->userdata('username') == '' && $this->CI->session->userdata('akses_level')=='') {
 			$this->CI->session->set_flashdata('sukses','Oops...silakan login dulu');
@@ -52,7 +52,7 @@ class User_login {
 		}	
 	}
 	
-	// Logout
+
 	public function logout($redirect) {
 		$this->CI->session->unset_userdata('username');
 		$this->CI->session->unset_userdata('akses_level');

@@ -1,32 +1,19 @@
-    <div id="k-body"><!-- content wrapper -->
-    
-        <div class="container"><!-- container -->
-        
-            <div class="row"><!-- row -->            
-            
-                <div class="k-breadcrumbs col-lg-12 clearfix"><!-- breadcrumbs -->
-                
+    <div id="k-body">
+        <div class="container">
+            <div class="row">          
+                <div class="k-breadcrumbs col-lg-12 clearfix">
                     <ol class="breadcrumb">
                         <li><a href="<?php echo base_url();?>">Home</a></li>
                     </ol>
-                    
-                </div><!-- breadcrumbs end -->
-                
-            </div><!-- row end -->
-            
+                </div>
+            </div>
             <?php include('slider.php');?>
          <div style="background-color: #ffffff">   
-            <div class="row no-gutter"><!-- row -->
-                
-                <?php include ('produk.php');?>
-                
+            <div class="row no-gutter">
                     <?php include ('news.php');?>
-
-                        <?php include ('klien.php');?>
-                            
-            </div><!-- row end -->
-        
-        </div><!-- container end -->
+                        <?php include ('klien.php');?>     
+            </div>
+        </div>
     </div>
-    </div><!-- content wrapper end -->
+    </div>
   
